@@ -15,10 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+      <body>
+        <div className="flex flex-col bg-gradient-to-b from-[#F9FAFB] to-[#D2D6DB] p-0 m-0">
+          <Navbar />
+          <div className="min-h-[calc(100vh_-_3rem)] overflow-x-scroll">
+            {children}
+          </div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
