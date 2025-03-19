@@ -9,7 +9,7 @@ import { RiCloseLine } from "react-icons/ri";
 import { useToggle } from "usehooks-ts";
 
 const MobileNav = () => {
-  const [menuOpen, toggleMenu, setMenu] = useToggle(false);
+  const [menuOpen, toggleMenu] = useToggle(false);
   return (
     <>
       <header
