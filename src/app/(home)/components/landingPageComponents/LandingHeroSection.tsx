@@ -21,7 +21,7 @@ const LandingHeroSection = () => {
             <Button variant="secondary" className="flex-1">
               Learn more
             </Button>
-            <Button className="flex-1">See pricing</Button>
+            <Button className="flex-1 ">See pricing</Button>
           </div>
         </div>
         <div>
