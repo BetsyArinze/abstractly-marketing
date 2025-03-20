@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "dependencies": {
     "classnames": "^2.5.1",
     "next": "15.2.3",
@@ -24,6 +27,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
+    "pre-commit": "^1.2.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
