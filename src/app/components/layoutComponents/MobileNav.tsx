@@ -14,7 +14,7 @@ const MobileNav = () => {
     <>
       <header
         className={classNames(
-          "z-10 w-full lg:hidden px-8 pt-4 pb-8 h-screen relative transition-all",
+          "z-10 w-full lg:hidden px-8 pt-4 pb-8  relative transition-all",
           { "fixed top-0 left-0 bg-white": menuOpen }
         )}
       >
@@ -40,7 +40,7 @@ const MobileNav = () => {
           <ul
             className={classNames(
               "flex flex-col h-full w-full",
-              { "flex ": menuOpen },
+              { "flex h-screen": menuOpen },
               { "hidden ": !menuOpen }
             )}
           >

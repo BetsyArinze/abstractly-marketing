@@ -5,7 +5,7 @@ import Link from "next/link";
 const DesktopNav = () => {
   return (
     <>
-      <header className="hidden lg:block z-10 pt-4">
+      <header className="hidden lg:block z-10 pt-4 pb-3">
         <nav className="flex px-[112px] items-center gap-24">
           <div className="flex gap-1 items-center cursor-pointer">
             <Image
