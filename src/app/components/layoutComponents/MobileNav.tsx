@@ -14,7 +14,7 @@ const MobileNav = () => {
     <>
       <header
         className={classNames(
-          "z-10 w-full lg:hidden px-8 pt-4 pb-8  relative transition-all",
+          "fixed w-full lg:hidden px-8 pt-4 pb-3  transition-all top-0 left-0 z-50 bg-[#F2F3F5]",
           { "fixed top-0 left-0 bg-white": menuOpen }
         )}
       >
@@ -27,7 +27,12 @@ const MobileNav = () => {
                 width={32}
                 height={32}
               />
-              <span className="font-bold text-base">Abstractly</span>
+              <span
+                className="font-bold text-base text-neutral-900"
+                style={{ letterSpacing: "-0.06em" }}
+              >
+                Abstractly
+              </span>
             </div>
             <button
               title="menu-button"
