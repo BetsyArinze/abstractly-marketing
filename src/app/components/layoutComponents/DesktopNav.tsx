@@ -5,7 +5,7 @@ import Link from "next/link";
 const DesktopNav = () => {
   return (
     <>
-      <header className="hidden lg:block z-10 pt-4 pb-3">
+      <header className="fixed hidden lg:block pt-4 pb-3 top-0 left-0 w-full z-50 bg-[#F2F3F5]">
         <nav className="flex px-[112px] items-center gap-24">
           <div className="flex gap-1 items-center cursor-pointer">
             <Image
@@ -14,9 +14,14 @@ const DesktopNav = () => {
               width={32}
               height={32}
             />
-            <span className="font-bold text-base">Abstractly</span>
+            <span
+              className="font-bold text-base text-neutral-900"
+              style={{ letterSpacing: "-0.06em" }}
+            >
+              Abstractly
+            </span>
           </div>
-          <ul className="flex flex-wrap flex-1 lg:flex-nowrap gap-5 lg:gap-8 justify-start">
+          <ul className="flex flex-wrap transition-all flex-1 lg:flex-nowrap gap-5 lg:gap-8 justify-start">
             {navlinks.map((link) => {
               return (
                 <li key={link.title} className="flex gap-8">
