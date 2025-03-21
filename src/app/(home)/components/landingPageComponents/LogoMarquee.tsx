@@ -1,4 +1,4 @@
-import Paragraph from "@/app/components/ui/Paragraph";
+import Heading from "@/app/components/ui/Heading";
 import Image from "next/image";
 
 const logos = [
@@ -16,10 +16,10 @@ const LogoMarquee = () => {
   return (
     <section className="mx-4 py-24 overflow-hidden bg-white">
       <div className="flex flex-col text-center gap-8">
-        <Paragraph size="md">Used by teams that you love</Paragraph>
+        <Heading style="h4">Used by teams that you love</Heading>
         <div className="flex w-max animate-marquee">
-          {logos.concat(logos).map((logo) => (
-            <div key={logo} className="flex justify-center w-[218px] h-[96px]">
+          {logos.concat(logos).map((logo, index) => (
+            <div key={index} className="flex justify-center w-[218px] h-[96px]">
               <Image src={logo} alt="logo" width={170} height={48} />
             </div>
           ))}
