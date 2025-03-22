@@ -21,7 +21,7 @@ const DesktopNav = () => {
               Abstractly
             </span>
           </div>
-          <ul className="flex flex-wrap transition-all flex-1 lg:flex-nowrap gap-5 lg:gap-8 justify-start">
+          <ul className="flex flex-wrap transition-all flex-1 lg:flex-nowrap gap-5 lg:gap-8 justify-start 2xl:justify-center">
             {navlinks.map((link) => {
               return (
                 <li key={link.title} className="flex gap-8">

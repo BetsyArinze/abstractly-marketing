@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const LandingHeroSection = () => {
   return (
-    <section className="px-4 pt-[100px] lg:pt-4">
+    <section className="px-4 pt-[100px] lg:pt-19">
       <div className="flex flex-col lg:flex-row bg-white gap-8 items-center px-3 md:px-4 lg:px-24 py-12 md:py-16 lg:py-24 rounded-t-md">
-        <div className="flex flex-col gap-8 md:gap-16 lg:gap-8 w-full lg:w-[52%]">
-          <div className="flex flex-col gap-6 text-center md:text-start">
+        <div className="flex flex-col gap-8 md:gap-16 lg:gap-8 w-full lg:w-[45%]">
+          <div className="flex flex-col gap-6 text-center md:text-start ">
             <Heading className="text-4xl md:text-5xl lg:text-6xl font-semibold">
               Well crafted abstract images
             </Heading>
@@ -24,12 +24,13 @@ const LandingHeroSection = () => {
             <Button className="flex-1 ">See pricing</Button>
           </div>
         </div>
-        <div>
+        <div className="w-full lg:w-[54%] h-[264px] md:h-[520px] ">
           <Image
             src="/landingPage/hero-image.jpg"
             height={526}
             width={696}
             alt="hero"
+            className="h-full w-full"
           />
         </div>
       </div>
