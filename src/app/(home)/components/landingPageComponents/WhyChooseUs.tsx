@@ -17,7 +17,7 @@ const WhyChooseUs = () => {
           <Heading style="h6" className="text-indigo-700 font-semibold pb-3">
             Premium abstract images
           </Heading>
-          <Heading style="xl" className="font-semibold pb-5">
+          <Heading className="font-semibold pb-5 text-5xl">
             Easy access to top quality images
           </Heading>
           <Paragraph style="xl" className="text-center lg:px-28">
