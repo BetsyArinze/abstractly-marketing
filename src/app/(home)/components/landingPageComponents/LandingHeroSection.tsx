@@ -12,7 +12,7 @@ const LandingHeroSection = () => {
             <Heading className="text-4xl md:text-5xl lg:text-6xl font-semibold">
               Well crafted abstract images
             </Heading>
-            <Paragraph size="xl">
+            <Paragraph style="xl">
               High quality abstract images for your projects, wallpaper and
               presentations.
             </Paragraph>

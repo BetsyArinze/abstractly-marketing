@@ -2,7 +2,7 @@ import React, { JSX } from "react";
 
 interface HeadingProps {
   children: React.ReactNode;
-  style?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  style?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "xl";
   className?: string;
 }
 
@@ -21,6 +21,7 @@ const Heading: React.FC<HeadingProps> = ({
     h4: "text-xl",
     h5: "text-lg",
     h6: "text-base",
+    xl: "text-5xl",
   };
 
   return (

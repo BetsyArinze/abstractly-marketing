@@ -2,13 +2,13 @@ import React from "react";
 
 interface HeadingProps {
   children: React.ReactNode;
-  size?: "sm" | "md" | "lg" | "xl";
+  style?: "sm" | "md" | "lg" | "xl";
   className?: string;
 }
 
 const Paragraph: React.FC<HeadingProps> = ({
   children,
-  size = "md",
+  style = "md",
   className = "",
 }) => {
   const baseStyle = "text-neutral-600";
@@ -20,7 +20,7 @@ const Paragraph: React.FC<HeadingProps> = ({
   };
 
   return (
-    <p className={`${baseStyle} ${sizeStyles[size]} ${className}`}>
+    <p className={`${baseStyle} ${sizeStyles[style]} ${className}`}>
       {children}
     </p>
   );
