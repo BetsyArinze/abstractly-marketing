@@ -1,5 +1,6 @@
 import AbstractlyFeatures from "../landingPageComponents/AbstractlyFeatures";
 import AbstractlyFeaturesTwo from "../landingPageComponents/AbstractlyFeaturesTwo";
+import FAQSection from "../landingPageComponents/FAQSection";
 import LandingHeroSection from "../landingPageComponents/LandingHeroSection";
 import LogoMarquee from "../landingPageComponents/LogoMarquee";
 import Pricing from "../landingPageComponents/Pricing";
@@ -14,6 +15,7 @@ const LandingPageContainer = () => {
       <AbstractlyFeatures />
       <AbstractlyFeaturesTwo />
       <Pricing />
+      <FAQSection />
     </>
   );
 };
