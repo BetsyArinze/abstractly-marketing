@@ -3,6 +3,7 @@ import AbstractlyFeaturesTwo from "../landingPageComponents/AbstractlyFeaturesTw
 import FAQSection from "../landingPageComponents/FAQSection";
 import LandingHeroSection from "../landingPageComponents/LandingHeroSection";
 import LogoMarquee from "../landingPageComponents/LogoMarquee";
+import Newsletter from "../landingPageComponents/Newsletter";
 import Pricing from "../landingPageComponents/Pricing";
 import WhyChooseUs from "../landingPageComponents/WhyChooseUs";
 
@@ -16,6 +17,7 @@ const LandingPageContainer = () => {
       <AbstractlyFeaturesTwo />
       <Pricing />
       <FAQSection />
+      <Newsletter />
     </>
   );
 };
