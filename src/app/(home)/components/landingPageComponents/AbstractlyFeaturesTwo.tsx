@@ -5,7 +5,7 @@ import { RiCopyrightLine, RiP2pLine, RiRocket2Line } from "react-icons/ri";
 
 const AbstractlyFeaturesTwo = () => {
   return (
-    <section className="bg-white mx-4 py-24">
+    <section className="bg-white mx-4 py-12 md:py-16 lg:py-24">
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24 w-full">
         <div className="flex flex-col pb-12 md:pb-16 items-center text-center">
           <Heading style="h6" className="text-indigo-700 font-semibold pb-3">

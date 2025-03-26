@@ -14,7 +14,7 @@ const logos = [
 
 const LogoMarquee = () => {
   return (
-    <section className="mx-4 py-24 overflow-hidden bg-white">
+    <section className="mx-4 py-12 md:py-16 lg:py-24 overflow-hidden bg-white">
       <div className="flex flex-col text-center gap-8">
         <Heading style="h4">Used by teams that you love</Heading>
         <div className="flex w-max animate-marquee">
