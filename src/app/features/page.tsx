@@ -1,8 +1,16 @@
+import AbstractlyFeatures from "../(home)/components/landingPageComponents/AbstractlyFeatures";
+import AbstractlyFeaturesTwo from "../(home)/components/landingPageComponents/AbstractlyFeaturesTwo";
+import WhyChooseUs from "../(home)/components/landingPageComponents/WhyChooseUs";
+import FeaturesHero from "./components/FeaturesHero";
+
 const Features = () => {
   return (
-    <div className="flex items-center justify-center  w-full h-screen">
-      Features page
-    </div>
+    <>
+      <FeaturesHero />
+      <WhyChooseUs />
+      <AbstractlyFeatures />
+      <AbstractlyFeaturesTwo />
+    </>
   );
 };
 
