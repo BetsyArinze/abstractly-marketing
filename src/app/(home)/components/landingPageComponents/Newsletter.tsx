@@ -6,7 +6,7 @@ import { RiCheckFill } from "react-icons/ri";
 
 const Newsletter = () => {
   return (
-    <section className="bg-white mx-4 py-24">
+    <section className="bg-white mx-4 py-12 md:py-16 lg:py-24">
       <div className="flex flex-col lg:flex-row  px-3 md:px-4 lg:px-24 justify-center items-center gap-8 w-full">
         <div className="flex flex-col w-full lg:w-[50%] gap-12">
           <Heading className="font-semibold text-5xl pb-4">
