@@ -1,8 +1,8 @@
 "use client";
 
-import Button from "@/app/components/ui/Button";
-import Heading from "@/app/components/ui/Heading";
-import Paragraph from "@/app/components/ui/Paragraph";
+import Button from "@/components/ui/Button";
+import Heading from "@/components/ui/Heading";
+import Paragraph from "@/components/ui/Paragraph";
 import { useState } from "react";
 import { RiBuildingLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
 

@@ -1,6 +1,6 @@
-import Button from "@/app/components/ui/Button";
-import Heading from "@/app/components/ui/Heading";
-import Paragraph from "@/app/components/ui/Paragraph";
+import Button from "@/components/ui/Button";
+import Heading from "@/components/ui/Heading";
+import Paragraph from "@/components/ui/Paragraph";
 import Image from "next/image";
 import { RiCheckFill } from "react-icons/ri";
 
