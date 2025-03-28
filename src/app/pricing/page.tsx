@@ -1,8 +1,18 @@
+import ContactUs from "../(home)/components/landingPageComponents/ContactSection";
+import PricingSection from "../(home)/components/landingPageComponents/Pricing";
+import WhyChooseUs from "../(home)/components/landingPageComponents/WhyChooseUs";
+import Testimonials from "../features/components/Testimonials";
+import PricingFAQ from "./components/PricingFAQ";
+
 const Pricing = () => {
   return (
-    <div className="flex items-center justify-center  w-full h-screen">
-      Pricing page
-    </div>
+    <>
+      <PricingSection />
+      <PricingFAQ />
+      <WhyChooseUs />
+      <Testimonials />
+      <ContactUs />
+    </>
   );
 };
 
