@@ -7,7 +7,7 @@ import classNames from "classnames";
 import { useState } from "react";
 import { RiCheckFill } from "react-icons/ri";
 
-const Pricing = () => {
+const PricingSection = () => {
   const [selectedPlan, setSelectedPlan] = useState("standard");
 
   return (
@@ -177,7 +177,7 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default PricingSection;
 
 const basicPlanBenefits = [
   "Standard quality images",

@@ -6,7 +6,7 @@ import Paragraph from "@/components/ui/Paragraph";
 import { useState } from "react";
 import { RiBuildingLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
 
-const Contact = () => {
+const ContactUs = () => {
   const [message, setMessage] = useState("");
   const maxLength = 500;
   return (
@@ -91,4 +91,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactUs;

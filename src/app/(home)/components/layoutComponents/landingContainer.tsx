@@ -1,11 +1,11 @@
 import AbstractlyFeatures from "../landingPageComponents/AbstractlyFeatures";
 import AbstractlyFeaturesTwo from "../landingPageComponents/AbstractlyFeaturesTwo";
-import Contact from "../landingPageComponents/ContactSection";
+import ContactUs from "../landingPageComponents/ContactSection";
 import FAQSection from "../landingPageComponents/FAQSection";
 import LandingHeroSection from "../landingPageComponents/LandingHeroSection";
 import LogoMarquee from "../landingPageComponents/LogoMarquee";
 import Newsletter from "../landingPageComponents/Newsletter";
-import Pricing from "../landingPageComponents/Pricing";
+import PricingSection from "../landingPageComponents/Pricing";
 import WhyChooseUs from "../landingPageComponents/WhyChooseUs";
 
 const LandingPageContainer = () => {
@@ -16,10 +16,10 @@ const LandingPageContainer = () => {
       <WhyChooseUs />
       <AbstractlyFeatures />
       <AbstractlyFeaturesTwo />
-      <Pricing />
+      <PricingSection />
       <FAQSection />
       <Newsletter />
-      <Contact />
+      <ContactUs />
     </>
   );
 };
