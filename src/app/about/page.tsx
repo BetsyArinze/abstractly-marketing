@@ -1,8 +1,12 @@
+import ContactUs from "../(home)/components/landingPageComponents/ContactSection";
+import AboutUsHero from "./components/AboutUsHero";
+
 const About = () => {
   return (
-    <div className="flex items-center justify-center  w-full h-screen">
-      About page
-    </div>
+    <>
+      <AboutUsHero />
+      <ContactUs />
+    </>
   );
 };
 
