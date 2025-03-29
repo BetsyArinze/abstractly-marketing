@@ -6,13 +6,13 @@ import PricingFAQ from "./components/PricingFAQ";
 
 const Pricing = () => {
   return (
-    <>
+    <div className="pt-[100px] lg:pt-19">
       <PricingSection />
       <PricingFAQ />
       <WhyChooseUs />
       <Testimonials />
       <ContactUs />
-    </>
+    </div>
   );
 };
 
