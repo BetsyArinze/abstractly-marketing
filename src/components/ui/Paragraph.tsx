@@ -4,11 +4,15 @@ interface HeadingProps {
   children: React.ReactNode;
   style?: "sm" | "md" | "lg" | "xl";
   className?: string;
+  $bold?: boolean;
+  $medium?: boolean;
 }
 
 const Paragraph: React.FC<HeadingProps> = ({
   children,
   style = "md",
+  $bold,
+  $medium,
   className = "",
 }) => {
   const baseStyle = "text-neutral-600";
@@ -19,8 +23,16 @@ const Paragraph: React.FC<HeadingProps> = ({
     xl: "text-xl",
   };
 
+  const fontWeight = $bold
+    ? "font-bold"
+    : $medium
+    ? "font-medium"
+    : "font-normal";
+
   return (
-    <p className={`${baseStyle} ${sizeStyles[style]} ${className}`}>
+    <p
+      className={`${baseStyle} ${sizeStyles[style]} ${fontWeight} ${className} `}
+    >
       {children}
     </p>
   );
