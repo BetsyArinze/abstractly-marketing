@@ -19,7 +19,7 @@ const Statistics = () => {
           </Paragraph>
         </div>
         <div className="flex flex-col lg:flex-row justify-center text-center gap-8 w-full min-h-[500px]">
-          <div className="w-full lg:w-[50%] flex-1 flex overflow-hidden rounded-lg">
+          <div className="w-full lg:w-[50%] flex-1 flex overflow-hidden rounded-lg max-h-[310px] md:max-h-[600px] lg:max-h-full">
             <Image
               src="/statistics.png"
               width={592}
