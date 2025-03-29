@@ -28,7 +28,7 @@ const Testimonials = () => {
                 <div className="flex gap-[10px] items-center">
                   <div className="flex w-12 h-12 rounded-full">
                     <Image
-                      src={`/testimonials/${testimonial.image}.jpg`}
+                      src={`/profile/${testimonial.image}.jpg`}
                       width={48}
                       height={48}
                       alt="profile"
