@@ -1,3 +1,4 @@
+import EntryMotion from "@/components/ui/EntryMotion";
 import Heading from "@/components/ui/Heading";
 import Paragraph from "@/components/ui/Paragraph";
 import {
@@ -13,7 +14,10 @@ const WhyChooseUs = () => {
   return (
     <section className="bg-white mx-4 py-12 md:py-16 lg:py-24">
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24">
-        <div className="flex flex-col pb-12 md:pb-16 items-center text-center">
+        <EntryMotion
+          from="top"
+          className="flex flex-col pb-12 md:pb-16 items-center text-center"
+        >
           <Heading style="h6" className="text-indigo-700 font-semibold pb-3">
             Premium abstract images
           </Heading>
@@ -24,10 +28,11 @@ const WhyChooseUs = () => {
             In a world where storytelling constantly evolves, we lead with
             groundbreaking images designed for your presentation excellence.
           </Paragraph>
-        </div>
+        </EntryMotion>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center text-center gap-8">
           {reasons.map((reason) => (
-            <div
+            <EntryMotion
+              from="bottom"
               key={reason.title}
               className="flex flex-col items-center lg:pb-4"
             >
@@ -38,7 +43,7 @@ const WhyChooseUs = () => {
                 {reason.title}
               </Heading>
               <Paragraph>{reason.description}</Paragraph>
-            </div>
+            </EntryMotion>
           ))}
         </div>
       </div>

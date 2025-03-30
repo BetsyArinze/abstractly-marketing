@@ -1,3 +1,4 @@
+import EntryMotion from "@/components/ui/EntryMotion";
 import Heading from "@/components/ui/Heading";
 import Paragraph from "@/components/ui/Paragraph";
 import Image from "next/image";
@@ -20,7 +21,10 @@ const AbstractlyFeatures = () => {
           </Paragraph>
         </div>
         <div className="flex flex-col lg:flex-row justify-center text-center gap-8 w-full">
-          <div className="flex flex-col w-full lg:w-[50%] gap-10">
+          <EntryMotion
+            from="left"
+            className="flex flex-col w-full lg:w-[50%] gap-10"
+          >
             {features.map((feature) => (
               <div
                 key={feature.title}
@@ -37,8 +41,11 @@ const AbstractlyFeatures = () => {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="w-full lg:w-[50%] h-[180px] md:h-[394px] overflow-hidden rounded-lg">
+          </EntryMotion>
+          <EntryMotion
+            from="right"
+            className="w-full lg:w-[50%] h-[180px] md:h-[394px] overflow-hidden rounded-lg"
+          >
             <Image
               src="/features-right-image.jpg"
               width={592}
@@ -46,7 +53,7 @@ const AbstractlyFeatures = () => {
               alt="features"
               className="h-full w-full object-cover object-center"
             />
-          </div>
+          </EntryMotion>
         </div>
       </div>
     </section>
