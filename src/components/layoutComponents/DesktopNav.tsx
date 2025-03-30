@@ -1,6 +1,7 @@
 "use client";
 
 import { navlinks } from "@/app/utils/navlinks";
+import { abstractlyPaths } from "@/app/utils/paths";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +14,7 @@ const DesktopNav = () => {
     <>
       <header className="fixed hidden lg:block pt-4 pb-3 top-0 left-0 w-full z-50 bg-[#F2F3F5]">
         <nav className="flex px-[112px] items-center gap-24">
-          <div className="flex gap-1 items-center cursor-pointer">
+          <Link href="/" className="flex gap-1 items-center cursor-pointer">
             <Image
               src="/abstractlyLogo.png"
               alt="Abstractly"
@@ -26,7 +27,7 @@ const DesktopNav = () => {
             >
               Abstractly
             </span>
-          </div>
+          </Link>
           <ul className="flex flex-wrap transition-all flex-1 lg:flex-nowrap gap-5 lg:gap-8 justify-start 2xl:justify-center">
             {navlinks.map((link) => {
               const isActive = pathname === link.path;
@@ -49,12 +50,16 @@ const DesktopNav = () => {
             })}
           </ul>
           <div className="flex gap-4">
-            <button className="bg-white shadow-md px-[16px] py-[10px] rounded-sm cursor-pointer">
-              Learn more
-            </button>
-            <button className="bg-indigo-700 shadow-md px-[16px] py-[10px] rounded-sm text-white cursor-pointer">
-              See pricing
-            </button>
+            <Link href={abstractlyPaths.about.path}>
+              <button className="bg-white shadow-md px-[16px] py-[10px] rounded-sm cursor-pointer">
+                Learn more
+              </button>
+            </Link>
+            <Link href={abstractlyPaths.pricing.path}>
+              <button className="bg-indigo-700 shadow-md px-[16px] py-[10px] rounded-sm text-white cursor-pointer">
+                See pricing
+              </button>
+            </Link>
           </div>
         </nav>
       </header>

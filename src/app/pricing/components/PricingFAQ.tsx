@@ -1,7 +1,9 @@
+import { abstractlyPaths } from "@/app/utils/paths";
 import FAQList from "@/components/layoutComponents/FAQList";
 import Button from "@/components/ui/Button";
 import Heading from "@/components/ui/Heading";
 import Paragraph from "@/components/ui/Paragraph";
+import Link from "next/link";
 
 const PricingFAQ = () => {
   return (
@@ -26,12 +28,14 @@ const PricingFAQ = () => {
               <span className="text-indigo-700">customer support</span> team.
             </Paragraph>
           </div>
-          <Button
-            variant="primary"
-            className="h-12 w-full md:w-fit min-w-[138px]"
-          >
-            Get in touch
-          </Button>
+          <Link href={abstractlyPaths.contact.path}>
+            <Button
+              variant="primary"
+              className="h-12 w-full md:w-fit min-w-[138px]"
+            >
+              Get in touch
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,8 +1,10 @@
+import { abstractlyPaths } from "@/app/utils/paths";
 import Button from "@/components/ui/Button";
 import EntryMotion from "@/components/ui/EntryMotion";
 import Heading from "@/components/ui/Heading";
 import Paragraph from "@/components/ui/Paragraph";
 import Image from "next/image";
+import Link from "next/link";
 
 const LandingHeroSection = () => {
   return (
@@ -22,10 +24,14 @@ const LandingHeroSection = () => {
             </Paragraph>
           </div>
           <div className="flex gap-8 w-full md:w-[60%] lg:w-[80%]">
-            <Button variant="secondary" className="flex-1">
-              Learn more
-            </Button>
-            <Button className="flex-1 ">See pricing</Button>
+            <Link href={abstractlyPaths.about.path} className="flex-1">
+              <Button variant="secondary" className="w-full">
+                Learn more
+              </Button>
+            </Link>
+            <Link href={abstractlyPaths.pricing.path} className="flex-1">
+              <Button className="w-full ">See pricing</Button>
+            </Link>
           </div>
         </EntryMotion>
         <EntryMotion className="w-full lg:w-[54%] h-[264px] md:h-[520px] ">
