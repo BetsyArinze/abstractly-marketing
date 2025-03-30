@@ -1,8 +1,14 @@
+"use client";
+
 import { navlinks } from "@/app/utils/navlinks";
+import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const DesktopNav = () => {
+  const pathname = usePathname();
+
   return (
     <>
       <header className="fixed hidden lg:block pt-4 pb-3 top-0 left-0 w-full z-50 bg-[#F2F3F5]">
@@ -23,11 +29,18 @@ const DesktopNav = () => {
           </div>
           <ul className="flex flex-wrap transition-all flex-1 lg:flex-nowrap gap-5 lg:gap-8 justify-start 2xl:justify-center">
             {navlinks.map((link) => {
+              const isActive = pathname === link.path;
+
               return (
                 <li key={link.title} className="flex gap-8">
                   <Link
                     href={link.path}
-                    className="hover:border-b-2 hover:border-[#432dd7] "
+                    className={classNames(
+                      `hover:border-b-2 hover:border-[#432dd7]`,
+                      {
+                        "text-[#432dd7]": isActive,
+                      }
+                    )}
                   >
                     {link.title}
                   </Link>
