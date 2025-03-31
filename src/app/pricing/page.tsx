@@ -1,4 +1,4 @@
-import ContactUs from "../(home)/components/landingPageComponents/ContactSection";
+import ContactUs from "../contact/components/ContactSection";
 import PricingSection from "../(home)/components/landingPageComponents/Pricing";
 import WhyChooseUs from "../(home)/components/landingPageComponents/WhyChooseUs";
 import Testimonials from "../features/components/Testimonials";

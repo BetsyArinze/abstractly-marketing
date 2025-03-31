@@ -1,4 +1,4 @@
-import ContactUs from "../(home)/components/landingPageComponents/ContactSection";
+import ContactUs from "./components/ContactSection";
 import FAQSection from "../(home)/components/landingPageComponents/FAQSection";
 
 const Contact = () => {

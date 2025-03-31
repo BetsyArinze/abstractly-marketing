@@ -1,6 +1,6 @@
 import AbstractlyFeatures from "../landingPageComponents/AbstractlyFeatures";
 import AbstractlyFeaturesTwo from "../landingPageComponents/AbstractlyFeaturesTwo";
-import ContactUs from "../landingPageComponents/ContactSection";
+import ContactUs from "../../../contact/components/ContactSection";
 import FAQSection from "../landingPageComponents/FAQSection";
 import LandingHeroSection from "../landingPageComponents/LandingHeroSection";
 import LogoMarquee from "../landingPageComponents/LogoMarquee";

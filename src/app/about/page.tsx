@@ -1,4 +1,4 @@
-import ContactUs from "../(home)/components/landingPageComponents/ContactSection";
+import ContactUs from "../contact/components/ContactSection";
 import AboutUsHero from "./components/AboutUsHero";
 import Statistics from "./components/Statistics";
 import Team from "./components/Team";
