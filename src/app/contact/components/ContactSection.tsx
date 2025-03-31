@@ -4,9 +4,14 @@ import FormError from "@/components/formComponents/FormError";
 import Button from "@/components/ui/Button";
 import Heading from "@/components/ui/Heading";
 import Paragraph from "@/components/ui/Paragraph";
-import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
+import { FieldValues, useForm } from "react-hook-form";
 import { RiBuildingLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
+
+// interface IContact {
+//   name: string,
+//   email: string,
+//   message: string,
+// }
 
 const ContactUs = () => {
   const maxLength = 500;
@@ -17,11 +22,11 @@ const ContactUs = () => {
     watch,
     setValue,
     formState: { errors, isSubmitting },
-  } = useForm();
+  } = useForm<FieldValues>();
 
   const message = watch("message", "");
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: FieldValues) => {
     console.log("form", data);
 
     try {
@@ -95,7 +100,7 @@ const ContactUs = () => {
                   className="w-full bg-neutral-50 border border-neutral-200 text-neutral-500 text-sm px-[14px] py-[10px] rounded-sm"
                 />
                 {errors.name?.message && (
-                  <FormError error={errors?.name.message} />
+                  <FormError error={errors?.name.message as string} />
                 )}
               </div>
               <div className="w-full">
@@ -114,7 +119,7 @@ const ContactUs = () => {
                   className="w-full bg-neutral-50 border border-neutral-200 text-neutral-500 text-sm px-[14px] py-[10px] rounded-sm"
                 />
                 {errors.email?.message && (
-                  <FormError error={errors.email.message} />
+                  <FormError error={errors.email.message as string} />
                 )}
               </div>
             </div>
@@ -133,7 +138,7 @@ const ContactUs = () => {
               />
               <div className="flex w-full">
                 {errors.message?.message && (
-                  <FormError error={errors.message.message} />
+                  <FormError error={errors.message.message as string} />
                 )}
                 <span className="w-full text-neutral-500 text-end">
                   {message.length}/{maxLength}
