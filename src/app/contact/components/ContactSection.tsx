@@ -50,7 +50,7 @@ const ContactUs = () => {
     }
   };
   return (
-    <section className="mx-4 py-12 md:py-16 lg:py-24 bg-white">
+    <section className="mx-4 py-12 md:py-14 lg:py-16 bg-white">
       <div className="flex flex-col lg:flex-row  px-3 md:px-4 lg:px-24 justify-center items-center gap-16 lg:gap-8 w-full">
         <div className="flex flex-col w-full lg:w-[50%] gap-12">
           <div className="flex flex-col">

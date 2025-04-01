@@ -12,7 +12,7 @@ import {
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-white mx-4 py-12 md:py-16 lg:py-24">
+    <section className="bg-white mx-4 py-12 md:py-14 lg:py-16">
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24">
         <EntryMotion
           from="top"
