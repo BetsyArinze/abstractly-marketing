@@ -7,6 +7,7 @@ import Button from "@/components/ui/Button";
 import Heading from "@/components/ui/Heading";
 import Paragraph from "@/components/ui/Paragraph";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { RiBuildingLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
 
 const ContactUs = () => {
@@ -27,12 +28,13 @@ const ContactUs = () => {
   const onSubmit = async (data: IContact) => {
     try {
       await contactus(data);
-      alert("Message sent successfully!");
+      toast.success("Message sent successfully!");
+
       setValue("name", "");
       setValue("email", "");
       setValue("message", "");
     } catch {
-      alert("Something went wrong.");
+      toast.error("Something went wrong");
     }
   };
 
