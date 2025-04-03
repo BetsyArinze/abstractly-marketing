@@ -28,15 +28,15 @@ const Newsletter = () => {
       });
 
       const result = await response.json();
-      console.log("code", result);
-      if (result.statusCode === 201) {
+
+      if (result.id) {
         toast.success("Subscription successful");
         setValue("email", "");
       } else {
         toast.error("Subscription failed. Please try again");
       }
     } catch {
-      toast.error("Something went wrong.");
+      toast.error("Subscription failed. Please try again");
     }
   };
 
