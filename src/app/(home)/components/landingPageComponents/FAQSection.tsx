@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const FAQSection = () => {
   return (
-    <section className="bg-white mx-4 py-12 md:py-16 lg:py-24">
+    <section className="bg-white mx-4 py-12 md:py-14 lg:py-16">
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24 w-full">
         <div className="flex flex-col pb-12 md:pb-16 items-center text-center">
           <Heading className="font-semibold pb-5 text-5xl">

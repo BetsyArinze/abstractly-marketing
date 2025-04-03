@@ -1,17 +1,13 @@
 "use client";
 
+import { useSendContactForm } from "@/app/utils/hooks";
+import { IContact } from "@/app/utils/model";
 import FormError from "@/components/formComponents/FormError";
 import Button from "@/components/ui/Button";
 import Heading from "@/components/ui/Heading";
 import Paragraph from "@/components/ui/Paragraph";
-import { FieldValues, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { RiBuildingLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
-
-// interface IContact {
-//   name: string,
-//   email: string,
-//   message: string,
-// }
 
 const ContactUs = () => {
   const maxLength = 500;
@@ -22,35 +18,26 @@ const ContactUs = () => {
     watch,
     setValue,
     formState: { errors, isSubmitting },
-  } = useForm<FieldValues>();
+  } = useForm<IContact>();
 
   const message = watch("message", "");
 
-  const onSubmit = async (data: FieldValues) => {
-    console.log("form", data);
+  const { mutateAsync: contactus } = useSendContactForm();
 
+  const onSubmit = async (data: IContact) => {
     try {
-      const response = await fetch("https://formspree.io/f/xrbpavae", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      console.log("re", response);
-
-      if (response.ok) {
-        alert("Message sent successfully!");
-        setValue("name", "");
-        setValue("email", "");
-        setValue("message", "");
-      } else {
-        alert("Failed to send message.");
-      }
+      await contactus(data);
+      alert("Message sent successfully!");
+      setValue("name", "");
+      setValue("email", "");
+      setValue("message", "");
     } catch {
       alert("Something went wrong.");
     }
   };
+
   return (
-    <section className="mx-4 py-12 md:py-16 lg:py-24 bg-white">
+    <section className="mx-4 py-12 md:py-14 lg:py-16 bg-white">
       <div className="flex flex-col lg:flex-row  px-3 md:px-4 lg:px-24 justify-center items-center gap-16 lg:gap-8 w-full">
         <div className="flex flex-col w-full lg:w-[50%] gap-12">
           <div className="flex flex-col">
