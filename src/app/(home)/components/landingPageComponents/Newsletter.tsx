@@ -28,7 +28,7 @@ const Newsletter = () => {
       });
 
       const result = await response.json();
-      console.log("code", result.statusCode);
+      console.log("code", result);
       if (result.statusCode === 201) {
         toast.success("Subscription successful");
         setValue("email", "");
