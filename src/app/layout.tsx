@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "../components/layoutComponents/Navbar";
 import Footer from "../components/layoutComponents/Footer";
 import QueryProvider from "./providers";
+import CookieConsentBanner from "@/components/CookieConsentBanner";
 
 export const metadata: Metadata = {
   title: "Abstractly",
@@ -26,6 +27,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </QueryProvider>
+        <CookieConsentBanner />
       </body>
     </html>
   );
