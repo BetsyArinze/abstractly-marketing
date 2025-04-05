@@ -93,6 +93,7 @@ const Newsletter = () => {
             height={394}
             alt="features"
             className="h-full w-full"
+            loading="lazy"
           />
         </div>
       </div>

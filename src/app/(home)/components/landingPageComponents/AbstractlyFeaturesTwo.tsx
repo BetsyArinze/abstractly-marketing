@@ -27,6 +27,7 @@ const AbstractlyFeaturesTwo = () => {
               height={394}
               alt="features"
               className="h-full w-full object-cover object-center"
+              loading="lazy"
             />
           </div>
           <div className="flex flex-col w-full lg:w-[50%] gap-10">
