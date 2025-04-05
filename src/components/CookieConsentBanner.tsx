@@ -2,33 +2,19 @@
 
 import CookieConsent from "react-cookie-consent";
 import Paragraph from "./ui/Paragraph";
+import Button from "./ui/Button";
 
 const CookieConsentBanner = () => {
   return (
     <CookieConsent
       location="bottom"
-      buttonText="Allow cookies"
-      declineButtonText="Decline all"
-      enableDeclineButton
+      buttonClasses="hidden"
       cookieName="yourAppCookieConsent"
       style={{
         background: "white",
-        padding: "20px",
+        padding: "20px 0px 0px 0px",
         alignItems: "center",
-      }}
-      buttonStyle={{
-        backgroundColor: "#4CAF50",
-        color: "#FFF",
-        fontSize: "14px",
-        padding: "10px 20px",
-        margin: "0 8px",
-      }}
-      declineButtonStyle={{
-        backgroundColor: "#f44336",
-        color: "#FFF",
-        fontSize: "14px",
-        padding: "10px 20px",
-        margin: "0 8px",
+        border: "1px solid #e5e7eb",
       }}
       expires={365}
       onAccept={() => {
@@ -38,8 +24,8 @@ const CookieConsentBanner = () => {
         console.log("Cookies declined");
       }}
     >
-      <div className="text-neutral-900 h-fit mb-0">
-        <Paragraph $medium className="mb-2 text-neutral-900">
+      <div className="text-neutral-900 h-fit mb-6 md:mb-6">
+        <Paragraph $medium className="mb-2 text-neutral-900 font-semibold">
           We use cookies
         </Paragraph>
         <Paragraph className="">
@@ -49,40 +35,15 @@ const CookieConsentBanner = () => {
           and your options, please read our cookie policy.
         </Paragraph>
       </div>
+      <div className="flex justify-between flex-col md:flex-row gap-2">
+        <Button variant="danger">Decline all</Button>
+        <div className="flex flex-col md:flex-row gap-2 md:gap-4">
+          <Button variant="primary">Allow cookies</Button>
+          <Button variant="secondary">Manage cookies</Button>
+        </div>
+      </div>
     </CookieConsent>
   );
 };
 
 export default CookieConsentBanner;
-
-{
-  /* <div className="w-full bg-white">Hi</div> */
-}
-{
-  /* <div className="flex gap-4">
-  <button
-    style={{
-      backgroundColor: "#4CAF50",
-      color: "#FFF",
-      fontSize: "14px",
-      padding: "10px 20px",
-      borderRadius: "4px",
-    }}
-    onClick={() => console.log("Cookies accepted")}
-  >
-    Accept All
-  </button>
-  <button
-    style={{
-      backgroundColor: "#f44336",
-      color: "#FFF",
-      fontSize: "14px",
-      padding: "10px 20px",
-      borderRadius: "4px",
-    }}
-    onClick={() => console.log("Cookies declined")}
-  >
-    Decline
-  </button>
-</div> */
-}
