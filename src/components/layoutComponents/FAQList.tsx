@@ -41,6 +41,7 @@ const FAQList: FC<FAQ> = ({ faqs }) => {
             placeholder={undefined}
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
+            role="button"
           >
             {faq.title}
             <span className="ml-auto pl-4">

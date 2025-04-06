@@ -18,12 +18,16 @@ const Team = () => {
             a unique perspective and expertise to the table.
           </Paragraph>
         </div>
-        <div className="grid w-full gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center">
+        <div
+          className="grid w-full gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center"
+          role="list"
+        >
           {teamMembers.map((member) => {
             return (
               <div
                 key={member.name}
                 className="flex flex-col flex-1 items-start mx-auto lg:mx-0"
+                role="listitem"
               >
                 <div className="w-full max-h-[296px] pb-6">
                   <Image

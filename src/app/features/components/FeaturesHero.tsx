@@ -9,7 +9,10 @@ import { RiCheckFill } from "react-icons/ri";
 
 const FeaturesHero = () => {
   return (
-    <section className="px-4 pt-[100px] lg:pt-19">
+    <section
+      className="px-4 pt-[100px] lg:pt-19"
+      aria-labelledby="features-hero"
+    >
       <div className="flex flex-col lg:flex-row bg-white gap-8 items-center px-3 md:px-4 lg:px-24 py-12 md:py-14 lg:py-16 rounded-t-md">
         <EntryMotion
           from="top"

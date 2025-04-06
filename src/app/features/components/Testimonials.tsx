@@ -19,11 +19,15 @@ const Testimonials = () => {
           </Paragraph>
         </div>
         <div className="flex justify-center text-center w-full">
-          <div className="grid grid-rows-1 md:grid-rows-2 lg:grid-rows-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full auto-rows-fr">
+          <div
+            className="grid grid-rows-1 md:grid-rows-2 lg:grid-rows-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full auto-rows-fr"
+            role="list"
+          >
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.handle}
                 className="flex flex-col items-start justify-start p-6 w-full gap-4 text-start border border-neutral-200 shadow-md rounded-lg"
+                role="listitem"
               >
                 <div className="flex gap-[10px] items-center">
                   <div className="flex w-12 h-12 rounded-full">

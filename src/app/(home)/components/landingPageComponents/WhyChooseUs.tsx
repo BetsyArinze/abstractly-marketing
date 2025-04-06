@@ -29,7 +29,10 @@ const WhyChooseUs = () => {
             groundbreaking images designed for your presentation excellence.
           </Paragraph>
         </EntryMotion>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center text-center gap-8">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center text-center gap-8"
+          role="list"
+        >
           {reasons.map((reason) => (
             <EntryMotion
               from="bottom"

@@ -6,7 +6,10 @@ import { RiHdLine, RiRainbowLine, RiWaterPercentLine } from "react-icons/ri";
 
 const AbstractlyFeatures = () => {
   return (
-    <section className="bg-white mx-4 py-12 md:py-14 lg:py-16">
+    <section
+      className="bg-white mx-4 py-12 md:py-14 lg:py-16"
+      aria-labelledby="features"
+    >
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24 w-full">
         <div className="flex flex-col pb-12 md:pb-16 items-center text-center">
           <Heading style="h6" className="text-indigo-700 font-semibold pb-3">
@@ -24,6 +27,7 @@ const AbstractlyFeatures = () => {
           <EntryMotion
             from="left"
             className="flex flex-col w-full lg:w-[50%] gap-10"
+            role="list"
           >
             {features.map((feature) => (
               <div
@@ -31,7 +35,7 @@ const AbstractlyFeatures = () => {
                 className="flex items-start justify-start lg:pb-4 gap-5"
               >
                 <div className="min-w-12 h-12 flex items-center justify-center rounded-full shadow-md ">
-                  <feature.icon size={24} color="blue" />
+                  <feature.icon size={24} color="blue" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col items-start text-start">
                   <Heading style="h5" className="font-semibold ">

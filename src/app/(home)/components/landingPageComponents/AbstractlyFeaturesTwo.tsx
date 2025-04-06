@@ -30,14 +30,14 @@ const AbstractlyFeaturesTwo = () => {
               loading="lazy"
             />
           </div>
-          <div className="flex flex-col w-full lg:w-[50%] gap-10">
+          <div className="flex flex-col w-full lg:w-[50%] gap-10" role="list">
             {features.map((feature) => (
               <div
                 key={feature.title}
                 className="flex items-start justify-start lg:pb-4 gap-5"
               >
                 <div className="min-w-12 h-12 flex items-center justify-center rounded-full shadow-md ">
-                  <feature.icon size={24} color="blue" />
+                  <feature.icon size={24} color="blue" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col items-start text-start">
                   <Heading style="h5" className="font-semibold ">
