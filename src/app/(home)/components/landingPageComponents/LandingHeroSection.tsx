@@ -8,7 +8,10 @@ import Link from "next/link";
 
 const LandingHeroSection = () => {
   return (
-    <section className="px-4 pt-[100px] lg:pt-19">
+    <section
+      className="px-4 pt-[100px] lg:pt-19"
+      aria-labelledby="landing-page"
+    >
       <div className="flex flex-col w-full lg:flex-row bg-white gap-8 items-center px-3 md:px-4 lg:px-24 py-12 md:py-14 lg:py-16 rounded-t-md">
         <EntryMotion
           from="top"

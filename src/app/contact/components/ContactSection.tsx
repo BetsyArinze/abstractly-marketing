@@ -39,7 +39,10 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="mx-4 py-12 md:py-14 lg:py-16 bg-white">
+    <section
+      className="mx-4 py-12 md:py-14 lg:py-16 bg-white"
+      aria-labelledby="contact-us"
+    >
       <div className="flex flex-col lg:flex-row  px-3 md:px-4 lg:px-24 justify-center items-center gap-16 lg:gap-8 w-full">
         <div className="flex flex-col w-full lg:w-[50%] gap-12">
           <div className="flex flex-col">
@@ -76,7 +79,12 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="w-full lg:w-[50%]">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="w-full lg:w-[50%]"
+          role="form"
+          aria-labelledby="contact-form"
+        >
           <div className="flex flex-col w-full gap-6 border border-neutral-200 p-8 rounded-lg">
             <div className="flex flex-col md:flex-row w-full gap-8">
               <div className="w-full">
@@ -84,7 +92,9 @@ const ContactUs = () => {
                   Name
                 </label>
                 <input
+                  id="name"
                   placeholder="Your name"
+                  aria-labelledby="name"
                   {...register("name", { required: "Name is required" })}
                   className="w-full bg-neutral-50 border border-neutral-200 text-neutral-500 text-sm px-[14px] py-[10px] rounded-sm"
                 />
