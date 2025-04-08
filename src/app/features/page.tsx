@@ -3,6 +3,17 @@ import AbstractlyFeatures from "../(home)/components/landingPageComponents/Abstr
 import FAQSection from "../(home)/components/landingPageComponents/FAQSection";
 import WhyChooseUs from "../(home)/components/landingPageComponents/WhyChooseUs";
 import FeaturesHero from "./components/FeaturesHero";
+import { Metadata } from "next";
+
+const PAGE_TITLE = "Features | Abstractly";
+export const metadata: Metadata = {
+  title: PAGE_TITLE,
+  description: "Explore the powerful features of Abstractly",
+  openGraph: {
+    title: PAGE_TITLE,
+    description: "Explore the powerful features of Abstractly",
+  },
+};
 
 const Features = () => {
   const AbstractlyFeaturesTwo = dynamic(

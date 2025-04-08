@@ -3,6 +3,19 @@ import PricingSection from "../(home)/components/landingPageComponents/Pricing";
 import WhyChooseUs from "../(home)/components/landingPageComponents/WhyChooseUs";
 import PricingFAQ from "./components/PricingFAQ";
 import dynamic from "next/dynamic";
+import { Metadata } from "next";
+
+const PAGE_TITLE = "Pricing Plans | Abstractly";
+export const metadata: Metadata = {
+  title: PAGE_TITLE,
+  description:
+    "Flexible and affordable pricing plans designed to meet your specific needs",
+  openGraph: {
+    title: PAGE_TITLE,
+    description:
+      "Flexible and affordable pricing plans designed to meet your specific needs",
+  },
+};
 
 const Pricing = () => {
   const Testimonials = dynamic(
