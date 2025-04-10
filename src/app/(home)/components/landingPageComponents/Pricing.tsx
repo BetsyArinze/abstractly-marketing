@@ -8,12 +8,13 @@ import { useState } from "react";
 import { RiCheckFill } from "react-icons/ri";
 
 const PricingSection = () => {
-  const [selectedPlan, setSelectedPlan] = useState("standard");
+  const [selectedPlan, setSelectedPlan] = useState("Standard");
+  const [billingPeriod, setBillingPeriod] = useState<string>("monthly");
 
   return (
     <section className="bg-white mx-4 py-12 md:py-14 lg:py-16">
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24 w-full">
-        <div className="flex flex-col pb-12 md:pb-16 items-center text-center">
+        <div className="flex flex-col pb-10 items-center text-center">
           <Heading style="h6" className="text-indigo-700 font-semibold pb-3">
             Pricing Tiers
           </Heading>
@@ -25,152 +26,122 @@ const PricingSection = () => {
             - our flexible options have your journey mapped out.
           </Paragraph>
         </div>
+        <div className="flex pb-12 md:pb-16 gap-8 items-center">
+          <a
+            className={classNames(
+              `text base py-2 px-[38px] font-medium cursor-pointer ${
+                billingPeriod === "monthly"
+                  ? "border border-neutral-200 rounded text-neutral-900 shadow-sm "
+                  : "text-neutral-600"
+              }`
+            )}
+            onClick={() => setBillingPeriod("monthly")}
+          >
+            Monthly
+          </a>
+          <a
+            className={classNames(
+              `text base py-2 px-[38px] font-medium cursor-pointer ${
+                billingPeriod === "annually"
+                  ? "border border-neutral-200 rounded text-neutral-900 shadow-sm "
+                  : "text-neutral-600"
+              }`
+            )}
+            onClick={() => setBillingPeriod("annually")}
+          >
+            Annually
+          </a>
+        </div>
         <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
-          <div
-            className={classNames(
-              "flex flex-col flex-1 w-full border rounded-lg",
-              {
-                "border-indigo-600 shadow-md": selectedPlan === "basic",
-                "border-neutral-200": selectedPlan !== "basic",
-              }
-            )}
-            onClick={() => setSelectedPlan("basic")}
-          >
-            <div className="flex flex-col flex-1 p-8 gap-8">
-              <div>
-                <Heading style="h4" className="font-semibold pb-2">
-                  Basic Plan
-                </Heading>
-                <Paragraph>
-                  Access to a curated selection of abstract images
-                </Paragraph>
-              </div>
-              <div>
-                <p
-                  className={classNames(``, {
-                    "text-indigo-700": selectedPlan === "basic",
-                    "text-neutral-900": selectedPlan !== "basic",
-                  })}
-                >
-                  <span className="font-semibold text-5xl">$9.99</span>/month
-                </p>
-                <Paragraph>Billed monthly</Paragraph>
-              </div>
-              <div className="flex flex-col gap-5 flex-1">
-                {basicPlanBenefits.map((benefit) => (
-                  <div className="flex gap-3" key={benefit}>
-                    <div className="flex w-6 h-6 bg-indigo-50 rounded-full items-center justify-center">
-                      <RiCheckFill color="blue" size={24} />
-                    </div>
-                    <Paragraph>{benefit}</Paragraph>
-                  </div>
-                ))}
-              </div>
-              <Button
-                variant={selectedPlan === "basic" ? "primary" : "secondary"}
+          {billingPlans.map((billingPlan) => {
+            let amountPerMonth = 19.99;
+            let benefits: string[] = [];
+            const isMonthly = billingPeriod === "monthly";
+            let annualTotalAmount = 192;
+
+            if (billingPlan === "Basic") {
+              benefits = basicPlanBenefits;
+              amountPerMonth = isMonthly
+                ? amount.basic.monthly
+                : amount.basic.annually;
+              annualTotalAmount = Math.ceil(amount.basic.annually) * 12;
+            } else if (billingPlan === "Standard") {
+              benefits = standardPlanBenefits;
+              amountPerMonth = isMonthly
+                ? amount.standard.monthly
+                : amount.standard.annually;
+              annualTotalAmount = Math.ceil(amount.standard.annually) * 12;
+            } else {
+              benefits = premiumPlanBenefits;
+              amountPerMonth = isMonthly
+                ? amount.premium.monthly
+                : amount.premium.annually;
+              annualTotalAmount = Math.ceil(amount.premium.annually) * 12;
+            }
+            return (
+              <div
+                className={classNames(
+                  "flex flex-col flex-1 w-full border rounded-lg",
+                  {
+                    "border-indigo-600 shadow-md": selectedPlan === billingPlan,
+                    "border-neutral-200": selectedPlan !== billingPlan,
+                  }
+                )}
+                key={billingPlan}
+                onClick={() => setSelectedPlan(billingPlan)}
               >
-                Buy now
-              </Button>
-            </div>
-          </div>
-          <div
-            className={classNames(
-              "flex flex-col flex-1 w-full rounded-lg border",
-              {
-                "border-indigo-600 shadow-md": selectedPlan === "standard",
-                "border-neutral-200": selectedPlan !== "standard",
-              }
-            )}
-            onClick={() => setSelectedPlan("standard")}
-          >
-            <div className="bg-indigo-50 py-4 text-center text-indigo-700 font-bold text-xl rounded-t-lg">
-              Most Popular
-            </div>
-            <div className="flex flex-col gap-8 p-8 flex-1">
-              <div>
-                <Heading style="h4" className="font-semibold pb-2">
-                  Standard Plan
-                </Heading>
-                <Paragraph>
-                  Next-level Integrations, priced economically
-                </Paragraph>
-              </div>
-              <div>
-                <p
-                  className={classNames(``, {
-                    "text-indigo-700": selectedPlan === "standard",
-                    "text-neutral-900": selectedPlan !== "standard",
-                  })}
-                >
-                  <span className="font-semibold text-5xl">$19.99</span>
-                  /month
-                </p>
-                <Paragraph>Billed monthly</Paragraph>
-              </div>
-              <div className="flex flex-col gap-5 flex-1">
-                {standardPlanBenefits.map((benefit) => (
-                  <div className="flex gap-3" key={benefit}>
-                    <div className="flex w-6 h-6 bg-indigo-50 rounded-full items-center justify-center">
-                      <RiCheckFill color="blue" size={24} />
-                    </div>
-                    <Paragraph>{benefit}</Paragraph>
+                {billingPlan === "Standard" && (
+                  <div className="bg-indigo-50 py-4 text-center text-indigo-700 font-bold text-xl rounded-t-lg">
+                    Most Popular
                   </div>
-                ))}
-              </div>
-              <Button
-                variant={selectedPlan === "standard" ? "primary" : "secondary"}
-              >
-                Buy now
-              </Button>
-            </div>
-          </div>
-          <div
-            className={classNames(
-              "flex flex-col flex-1 w-full border rounded-lg",
-              {
-                "border-indigo-600 shadow-md": selectedPlan === "premium",
-                "border-neutral-200": selectedPlan !== "premium",
-              }
-            )}
-            onClick={() => setSelectedPlan("premium")}
-          >
-            <div className="flex flex-col p-8 gap-8 flex-1">
-              <div>
-                <Heading style="h4" className="font-semibold pb-2">
-                  Premium Plan
-                </Heading>
-                <Paragraph>
-                  Experience limitless living for power users
-                </Paragraph>
-              </div>
-              <div>
-                <p
-                  className={classNames(``, {
-                    "text-indigo-700": selectedPlan === "premium",
-                    "text-neutral-900": selectedPlan !== "premium",
-                  })}
-                >
-                  <span className="font-semibold text-5xl">$29.99</span>/month
-                </p>
-                <Paragraph>Billed monthly</Paragraph>
-              </div>
-              <div className="flex flex-col gap-5 flex-1">
-                {premiumPlanBenefits.map((benefit) => (
-                  <div className="flex gap-3" key={benefit}>
-                    <div className="flex w-6 h-6 bg-indigo-50 rounded-full items-center justify-center">
-                      <RiCheckFill color="blue" size={24} />
-                    </div>
-                    <Paragraph>{benefit}</Paragraph>
+                )}
+                <div className="flex flex-col flex-1 p-8 gap-8">
+                  <div>
+                    <Heading style="h4" className="font-semibold pb-2">
+                      {billingPlan} Plan
+                    </Heading>
+                    <Paragraph>
+                      Access to a curated selection of abstract images
+                    </Paragraph>
                   </div>
-                ))}
+                  <div>
+                    <p
+                      className={classNames(``, {
+                        "text-indigo-700": selectedPlan === billingPlan,
+                        "text-neutral-900": selectedPlan !== billingPlan,
+                      })}
+                    >
+                      <span className="font-semibold text-5xl">
+                        ${amountPerMonth}
+                      </span>
+                      /month
+                    </p>
+                    <Paragraph>
+                      Billed {billingPeriod}{" "}
+                      {!isMonthly ? `$(${annualTotalAmount})` : ""}
+                    </Paragraph>
+                  </div>
+                  <div className="flex flex-col gap-5 flex-1">
+                    {benefits.map((benefit) => (
+                      <div className="flex gap-3" key={benefit}>
+                        <div className="flex w-6 h-6 bg-indigo-50 rounded-full items-center justify-center">
+                          <RiCheckFill color="blue" size={24} />
+                        </div>
+                        <Paragraph>{benefit}</Paragraph>
+                      </div>
+                    ))}
+                  </div>
+                  <Button
+                    variant={
+                      selectedPlan === billingPlan ? "primary" : "secondary"
+                    }
+                  >
+                    Buy now
+                  </Button>
+                </div>
               </div>
-              <Button
-                variant={selectedPlan === "premium" ? "primary" : "secondary"}
-              >
-                Buy now
-              </Button>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -178,6 +149,23 @@ const PricingSection = () => {
 };
 
 export default PricingSection;
+
+const billingPlans = ["Basic", "Standard", "Premium"];
+
+const amount = {
+  basic: {
+    monthly: 9.99,
+    annually: 6.99,
+  },
+  standard: {
+    monthly: 19.99,
+    annually: 15.99,
+  },
+  premium: {
+    monthly: 29.99,
+    annually: 25.99,
+  },
+};
 
 const basicPlanBenefits = [
   "Standard quality images",
