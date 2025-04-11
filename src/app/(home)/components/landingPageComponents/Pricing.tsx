@@ -6,10 +6,18 @@ import Paragraph from "@/components/ui/Paragraph";
 import classNames from "classnames";
 import { useState } from "react";
 import { RiCheckFill } from "react-icons/ri";
+import { useRouter } from "next/navigation";
 
 const PricingSection = () => {
   const [selectedPlan, setSelectedPlan] = useState("Standard");
   const [billingPeriod, setBillingPeriod] = useState<string>("monthly");
+  const [amountToPay, setAmountToPay] = useState<number>(500);
+
+  const router = useRouter();
+
+  const handleCheckout = async () => {
+    router.push(`/make-payment?amount=${amountToPay}`);
+  };
 
   return (
     <section className="bg-white mx-4 py-12 md:py-14 lg:py-16">
@@ -135,6 +143,7 @@ const PricingSection = () => {
                     variant={
                       selectedPlan === billingPlan ? "primary" : "secondary"
                     }
+                    onClick={handleCheckout}
                   >
                     Buy now
                   </Button>
