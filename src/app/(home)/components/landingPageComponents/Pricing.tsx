@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 const PricingSection = () => {
   const [selectedPlan, setSelectedPlan] = useState("Standard");
   const [billingPeriod, setBillingPeriod] = useState<string>("monthly");
-  const [amountToPay, setAmountToPay] = useState<number>(500);
+  const [amountToPay, setAmountToPay] = useState<number>(20);
 
   const router = useRouter();
 
@@ -143,7 +143,14 @@ const PricingSection = () => {
                     variant={
                       selectedPlan === billingPlan ? "primary" : "secondary"
                     }
-                    onClick={handleCheckout}
+                    onClick={() => {
+                      if (billingPeriod === "monthly") {
+                        setAmountToPay(amountPerMonth);
+                      } else {
+                        setAmountToPay(Math.ceil(amountPerMonth * 12));
+                      }
+                      handleCheckout();
+                    }}
                   >
                     Buy now
                   </Button>
