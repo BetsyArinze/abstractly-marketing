@@ -11,12 +11,11 @@ import { useRouter } from "next/navigation";
 const PricingSection = () => {
   const [selectedPlan, setSelectedPlan] = useState("Standard");
   const [billingPeriod, setBillingPeriod] = useState<string>("monthly");
-  const [amountToPay, setAmountToPay] = useState<number>(20);
 
   const router = useRouter();
 
-  const handleCheckout = async () => {
-    router.push(`/make-payment?amount=${amountToPay}`);
+  const handleCheckout = async (amount: number) => {
+    router.push(`/make-payment?amount=${amount}`);
   };
 
   return (
@@ -145,11 +144,12 @@ const PricingSection = () => {
                     }
                     onClick={() => {
                       if (billingPeriod === "monthly") {
-                        setAmountToPay(amountPerMonth);
+                        const amountToPay = amountPerMonth;
+                        handleCheckout(amountToPay);
                       } else {
-                        setAmountToPay(Math.ceil(amountPerMonth * 12));
+                        const amountToPay = Math.ceil(amountPerMonth * 12);
+                        handleCheckout(amountToPay);
                       }
-                      handleCheckout();
                     }}
                   >
                     Buy now
