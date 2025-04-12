@@ -8,6 +8,7 @@ import {
 } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import Button from "./ui/Button";
+import { Spinner } from "@material-tailwind/react";
 
 const CheckoutPage = ({ amount }: { amount: number }) => {
   const stripe = useStripe();
@@ -55,12 +56,19 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
     if (error) {
       setErrorMessage(error.message);
     }
+    setLoading(false);
   };
 
+  if (!stripe || !clientSecret || !elements) {
+    return (
+      <div className="flex justify-center items-center h-64">
+        <Spinner />
+      </div>
+    );
+  }
   return (
     <form onSubmit={handleSubmit} className="bg-white p-2 rounded-md">
       {clientSecret && <PaymentElement />}
-
       {errorMessage && <div>{errorMessage}</div>}
       <Button disabled={!stripe || loading} className="w-full mt-3">
         {!loading ? `Pay $${amount}` : "Processing..."}

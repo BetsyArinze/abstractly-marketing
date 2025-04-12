@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/ui/Button";
 import Heading from "@/components/ui/Heading";
 import Paragraph from "@/components/ui/Paragraph";
 import Link from "next/link";
@@ -13,22 +14,24 @@ const PaymentSuccessContent = () => {
   return (
     <main>
       <div className="flex flex-col items-center px-4 h-screen pt-[100px] lg:pt-22">
-        <div className="flex flex-col w-[60%] items-center justify-center px-10 py-4 bg-white rounded-md">
-          <Heading style="h2">Thank you!</Heading>
-          <Paragraph $medium>
-            You have successfully subscribed for Abstractly
-          </Paragraph>
-          <Heading style="h2" className="w-full text-center mt-2">
-            ${amount}
-          </Heading>
-          <Link href="/" className="w-full">
-            <Paragraph
-              $medium
-              className="w-full bg-indigo-700 py-3 text-white text-center mt-9"
-            >
-              Go to home
+        <div className="flex flex-col bg-white h-fit mt-4 rounded-md w-[80%] md:w-[50%] p-4 text-center">
+          <div className="flex flex-col bg-indigo-700 px-4 py-6 text-center">
+            <Heading style="h3" className="text-white">
+              Abstractly
+            </Heading>
+          </div>
+          <div className="flex flex-col py-4">
+            <Heading style="h2">Thank you!</Heading>
+            <Paragraph $medium>
+              You have successfully subscribed for Abstractly
             </Paragraph>
-          </Link>
+            <Heading style="h2" className="w-full text-center mt-2">
+              ${amount}
+            </Heading>
+            <Link href="/" className="w-full">
+              <Button className="mt-4"> Go to home</Button>
+            </Link>
+          </div>
         </div>
       </div>
     </main>
