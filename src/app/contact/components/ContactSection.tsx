@@ -40,7 +40,7 @@ const ContactUs = () => {
 
   return (
     <section
-      className="mx-4 py-12 md:py-14 lg:py-16 bg-white"
+      className="mx-4 py-12 md:py-14 lg:py-16 bg-light dark:bg-dark"
       aria-labelledby="contact-us"
     >
       <div className="flex flex-col lg:flex-row  px-3 md:px-4 lg:px-24 justify-center items-center gap-16 lg:gap-8 w-full">
@@ -56,7 +56,7 @@ const ContactUs = () => {
           </div>
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="flex w-12 h-12 rounded-full shadow-md items-center justify-center">
+              <div className="flex w-12 h-12 rounded-full shadow-md items-center justify-center dark:bg-light">
                 <RiBuildingLine size={24} color="blue" />
               </div>
               <Paragraph className="font-medium">
@@ -64,13 +64,13 @@ const ContactUs = () => {
               </Paragraph>
             </div>
             <div className="flex items-center gap-3">
-              <div className="flex w-12 h-12 rounded-full shadow-md items-center justify-center">
+              <div className="flex w-12 h-12 rounded-full shadow-md items-center justify-center dark:bg-light">
                 <RiPhoneLine size={24} color="blue" />
               </div>
               <Paragraph className="font-medium">+1 (650) 555-0198</Paragraph>
             </div>
             <div className="flex items-center gap-3">
-              <div className="flex w-12 h-12 rounded-full shadow-md items-center justify-center">
+              <div className="flex w-12 h-12 rounded-full shadow-md items-center justify-center dark:bg-light">
                 <RiMailLine size={24} color="blue" />
               </div>
               <Paragraph className="font-medium">
@@ -85,7 +85,7 @@ const ContactUs = () => {
           role="form"
           aria-labelledby="contact-form"
         >
-          <div className="flex flex-col w-full gap-6 border border-neutral-200 p-8 rounded-lg">
+          <div className="flex flex-col w-full gap-6 border border-neutral-200 dark:bg-light dark:text-black p-8 rounded-lg">
             <div className="flex flex-col md:flex-row w-full gap-8">
               <div className="w-full">
                 <label htmlFor="name" className="pb-[6px]">
@@ -96,7 +96,7 @@ const ContactUs = () => {
                   placeholder="Your name"
                   aria-labelledby="name"
                   {...register("name", { required: "Name is required" })}
-                  className="w-full bg-neutral-50 border border-neutral-200 text-neutral-500 text-sm px-[14px] py-[10px] rounded-sm"
+                  className="w-full bg-neutral-50 border border-neutral-200 text-neutral-500 dark:text-black text-sm px-[14px] py-[10px] rounded-sm"
                 />
                 {errors.name?.message && (
                   <FormError error={errors?.name.message as string} />
@@ -115,7 +115,7 @@ const ContactUs = () => {
                       message: "Invalid email",
                     },
                   })}
-                  className="w-full bg-neutral-50 border border-neutral-200 text-neutral-500 text-sm px-[14px] py-[10px] rounded-sm"
+                  className="w-full bg-neutral-50 border border-neutral-200 text-neutral-500 dark:text-black text-sm px-[14px] py-[10px] rounded-sm"
                 />
                 {errors.email?.message && (
                   <FormError error={errors.email.message as string} />
@@ -133,7 +133,7 @@ const ContactUs = () => {
                 maxLength={maxLength}
                 rows={4}
                 placeholder="Write your message..."
-                className="w-full bg-neutral-50 border border-neutral-200 text-neutral-500 text-sm px-[14px] py-[10px] rounded-sm"
+                className="w-full bg-neutral-50 border border-neutral-200 text-neutral-500 dark:text-black text-sm px-[14px] py-[10px] rounded-sm"
               />
               <div className="flex w-full">
                 {errors.message?.message && (

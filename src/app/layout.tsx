@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <QueryProvider>
-          <div className="flex flex-col bg-gradient-to-b from-[#F9FAFB] to-[#D2D6DB] p-0 m-0">
+          <div className="flex flex-col bg-gradient-to-b from-[#F9FAFB] to-[#D2D6DB] dark:from-[#1e2939] dark:to-[#1e2939] p-0 m-0">
             <Navbar />
             <div className="min-h-[calc(100vh_-_5rem)] overflow-x-scroll">
               {children}

@@ -12,7 +12,7 @@ import {
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-white mx-4 py-12 md:py-14 lg:py-16">
+    <section className="bg-light dark:bg-dark mx-4 py-12 md:py-14 lg:py-16">
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24">
         <EntryMotion
           from="top"
@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
               key={reason.title}
               className="flex flex-col items-center lg:pb-4"
             >
-              <div className="w-12 h-12 flex items-center justify-center rounded-full shadow-md">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full shadow-md dark:bg-light">
                 <reason.icon size={24} color="blue" />
               </div>
               <Heading style="h5" className="font-semibold pb-2 pt-5 ">

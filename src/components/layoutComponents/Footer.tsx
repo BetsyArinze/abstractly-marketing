@@ -7,7 +7,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <section className="px-4 pb-4">
-      <footer className="flex mt-auto bg-white  rounded-b-md w-full items-center justify-center py-12 md:py-14 lg:py-16 px-8">
+      <footer className="flex mt-auto bg-light dark:bg-dark  rounded-b-md w-full items-center justify-center py-12 md:py-14 lg:py-16 px-8">
         <div className="flex flex-col gap-4 items-center justify-center">
           <ul className="flex gap-4 pb-4">
             {navlinks
@@ -15,7 +15,10 @@ const Footer = () => {
               .map((link) => {
                 return (
                   <li key={link.title} className="flex gap-8">
-                    <Link href={link.path} className="text-neutral-600">
+                    <Link
+                      href={link.path}
+                      className="text-neutral-600 dark:text-bright"
+                    >
                       {link.title}
                     </Link>
                   </li>

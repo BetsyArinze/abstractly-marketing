@@ -19,7 +19,7 @@ const PricingSection = () => {
   };
 
   return (
-    <section className="bg-white mx-4 py-12 md:py-14 lg:py-16">
+    <section className="bg-light dark:bg-dark mx-4 py-12 md:py-14 lg:py-16">
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24 w-full">
         <div className="flex flex-col pb-10 items-center text-center">
           <Heading style="h6" className="text-indigo-700 font-semibold pb-3">
@@ -36,10 +36,10 @@ const PricingSection = () => {
         <div className="flex pb-12 md:pb-16 gap-8 items-center">
           <a
             className={classNames(
-              `text base py-2 px-[38px] font-medium cursor-pointer ${
+              `text base py-2 px-[38px] font-medium cursor-pointer dark:text-neutral-300 ${
                 billingPeriod === "monthly"
-                  ? "border border-neutral-200 rounded text-neutral-900 shadow-sm "
-                  : "text-neutral-600"
+                  ? "border border-neutral-200 rounded text-neutral-900 dark:text-neutral-600 shadow-sm dark:bg-gray-300"
+                  : "text-neutral-600 dark:text-neutral-300 "
               }`
             )}
             onClick={() => setBillingPeriod("monthly")}
@@ -50,8 +50,8 @@ const PricingSection = () => {
             className={classNames(
               `text base py-2 px-[38px] font-medium cursor-pointer ${
                 billingPeriod === "annually"
-                  ? "border border-neutral-200 rounded text-neutral-900 shadow-sm "
-                  : "text-neutral-600"
+                  ? "border border-neutral-200 rounded text-neutral-900 dark:text-neutral-600 shadow-sm dark:bg-gray-300"
+                  : "text-neutral-600 dark:text-neutral-300"
               }`
             )}
             onClick={() => setBillingPeriod("annually")}
@@ -88,7 +88,7 @@ const PricingSection = () => {
             return (
               <div
                 className={classNames(
-                  "flex flex-col flex-1 w-full border rounded-lg",
+                  "flex flex-col flex-1 w-full border rounded-lg dark:bg-neutral-300",
                   {
                     "border-indigo-600 shadow-md": selectedPlan === billingPlan,
                     "border-neutral-200": selectedPlan !== billingPlan,
@@ -98,24 +98,28 @@ const PricingSection = () => {
                 onClick={() => setSelectedPlan(billingPlan)}
               >
                 {billingPlan === "Standard" && (
-                  <div className="bg-indigo-50 py-4 text-center text-indigo-700 font-bold text-xl rounded-t-lg">
+                  <div className="bg-indigo-50 dark:bg-neutral-200 py-4 text-center text-indigo-700 font-bold text-xl rounded-t-lg">
                     Most Popular
                   </div>
                 )}
                 <div className="flex flex-col flex-1 p-8 gap-8">
                   <div>
-                    <Heading style="h4" className="font-semibold pb-2">
+                    <Heading
+                      style="h4"
+                      className="font-semibold pb-2 dark:text-gray-900"
+                    >
                       {billingPlan} Plan
                     </Heading>
-                    <Paragraph>
+                    <Paragraph className="dark:!text-black">
                       Access to a curated selection of abstract images
                     </Paragraph>
                   </div>
-                  <div>
+                  <div className="">
                     <p
                       className={classNames(``, {
                         "text-indigo-700": selectedPlan === billingPlan,
-                        "text-neutral-900": selectedPlan !== billingPlan,
+                        "text-neutral-900 dark:!text-black":
+                          selectedPlan !== billingPlan,
                       })}
                     >
                       <span className="font-semibold text-5xl">
@@ -123,7 +127,7 @@ const PricingSection = () => {
                       </span>
                       /month
                     </p>
-                    <Paragraph>
+                    <Paragraph className="dark:!text-black">
                       Billed {billingPeriod}{" "}
                       {!isMonthly ? `$(${annualTotalAmount})` : ""}
                     </Paragraph>
@@ -134,7 +138,9 @@ const PricingSection = () => {
                         <div className="flex w-6 h-6 bg-indigo-50 rounded-full items-center justify-center">
                           <RiCheckFill color="blue" size={24} />
                         </div>
-                        <Paragraph>{benefit}</Paragraph>
+                        <Paragraph className="dark:!text-black">
+                          {benefit}
+                        </Paragraph>
                       </div>
                     ))}
                   </div>

@@ -12,7 +12,7 @@ const Heading: React.FC<HeadingProps> = ({
   className = "",
 }) => {
   const Tag = style as keyof JSX.IntrinsicElements;
-  const baseStyles = "font-bold text-gray-900";
+  const baseStyles = "font-bold text-gray-900 dark:text-gray-300";
 
   const sizeStyles = {
     h1: "text-4xl",

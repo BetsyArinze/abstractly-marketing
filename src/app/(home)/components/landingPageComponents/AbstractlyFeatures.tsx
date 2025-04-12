@@ -7,7 +7,7 @@ import { RiHdLine, RiRainbowLine, RiWaterPercentLine } from "react-icons/ri";
 const AbstractlyFeatures = () => {
   return (
     <section
-      className="bg-white mx-4 py-12 md:py-14 lg:py-16"
+      className="bg-light dark:bg-dark mx-4 py-12 md:py-14 lg:py-16"
       aria-labelledby="features"
     >
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24 w-full">
@@ -34,7 +34,7 @@ const AbstractlyFeatures = () => {
                 key={feature.title}
                 className="flex items-start justify-start lg:pb-4 gap-5"
               >
-                <div className="min-w-12 h-12 flex items-center justify-center rounded-full shadow-md ">
+                <div className="min-w-12 h-12 flex items-center justify-center rounded-full shadow-md dark:bg-light">
                   <feature.icon size={24} color="blue" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col items-start text-start">

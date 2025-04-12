@@ -8,7 +8,7 @@ import Link from "next/link";
 const FAQSection = () => {
   return (
     <section
-      className="bg-white mx-4 py-12 md:py-14 lg:py-16"
+      className="bg-light dark:bg-dark mx-4 py-12 md:py-14 lg:py-16"
       aria-labelledby="faq-section"
     >
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24 w-full">
@@ -21,12 +21,15 @@ const FAQSection = () => {
           </Paragraph>
         </div>
         <FAQList faqs={faqs} />
-        <div className="flex flex-col md:flex-row w-full p-4 md:p-6 justify-between items-center rounded-lg border border-neutral-200 shadow-md">
+        <div className="flex flex-col dark:bg-dark md:flex-row w-full p-4 md:p-6 justify-between items-center rounded-lg border border-neutral-200 shadow-md">
           <div className="flex flex-col pb-4">
-            <Paragraph style="xl" className="font-semibold text-neutral-900">
+            <Paragraph
+              style="xl"
+              className="font-semibold text-neutral-900 dark:!text-bright"
+            >
               Can’t find the answer you’re looking for?
             </Paragraph>
-            <Paragraph>
+            <Paragraph className="dark:!text-bright">
               Reach out to our{" "}
               <span className="text-indigo-700">customer support</span> team.
             </Paragraph>

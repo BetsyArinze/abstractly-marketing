@@ -15,7 +15,7 @@ const Paragraph: React.FC<HeadingProps> = ({
   $medium,
   className = "",
 }) => {
-  const baseStyle = "text-neutral-600";
+  const baseStyle = "text-neutral-600 dark:text-neutral-300";
   const sizeStyles = {
     sm: "text-sm",
     md: "text-base",
