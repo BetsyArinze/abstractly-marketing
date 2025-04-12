@@ -14,4 +14,7 @@ export const abstractlyPaths = {
   contact: {
     path: "/contact",
   },
+  stripeCheckout: {
+    path: "/pricing/make-payment",
+  },
 };
