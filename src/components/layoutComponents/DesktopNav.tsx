@@ -6,13 +6,14 @@ import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Button from "../ui/Button";
 
 const DesktopNav = () => {
   const pathname = usePathname();
 
   return (
     <>
-      <header className="fixed hidden lg:block pt-4 pb-3 top-0 left-0 w-full z-50 bg-[#F2F3F5]">
+      <header className="fixed hidden lg:block pt-4 pb-3 top-0 left-0 w-full z-50 bg-gray dark:bg-dark">
         <nav className="flex px-[112px] items-center gap-24">
           <Link href="/" className="flex gap-1 items-center cursor-pointer">
             <Image
@@ -22,7 +23,7 @@ const DesktopNav = () => {
               height={32}
             />
             <span
-              className="font-bold text-base text-neutral-900"
+              className="font-bold text-base text-neutral-900 dark:text-neutral-300"
               style={{ letterSpacing: "-0.06em" }}
             >
               Abstractly
@@ -37,9 +38,9 @@ const DesktopNav = () => {
                   <Link
                     href={link.path}
                     className={classNames(
-                      `hover:border-b-2 hover:border-[#432dd7]`,
+                      `hover:border-b-2 hover:border-indigo-300`,
                       {
-                        "text-[#432dd7]": isActive,
+                        "text-[#432dd7] dark:text-indigo-300": isActive,
                       }
                     )}
                   >
@@ -51,14 +52,10 @@ const DesktopNav = () => {
           </ul>
           <div className="flex gap-4">
             <Link href={abstractlyPaths.about.path}>
-              <button className="bg-white shadow-md px-[16px] py-[10px] rounded-sm cursor-pointer">
-                Learn more
-              </button>
+              <Button variant="secondary">Learn more</Button>
             </Link>
             <Link href={abstractlyPaths.pricing.path}>
-              <button className="bg-indigo-700 shadow-md px-[16px] py-[10px] rounded-sm text-white cursor-pointer">
-                See pricing
-              </button>
+              <Button>See pricing</Button>
             </Link>
           </div>
         </nav>

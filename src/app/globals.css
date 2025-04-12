@@ -13,6 +13,16 @@
   --font-sans: var(--font-sans);
 }
 
+@theme {
+  --color-cray-500: oklch(0.72 0.11 178);
+  --color-light: oklch(1 0 0);
+  --color-dark: oklch(27.8% 0.033 256.848);
+  --color-gray: #f2f3f5;
+  --color-bright: oklch(87% 0 0);
+  --color-dull: oklch(43.9% 0 0);
+  --color-black: oklch(21% 0.034 264.665);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

@@ -36,7 +36,7 @@ const FAQList: FC<FAQ> = ({ faqs }) => {
         >
           <AccordionHeader
             color="blue"
-            className="bg-white text-lg font-medium text-neutral-900 flex items-center justify-between text-start cursor-pointer shadow-none border-none"
+            className="text-lg font-medium text-neutral-900 dark:text-bright flex items-center justify-between text-start cursor-pointer shadow-none border-none px-4 rounded-sm"
             onClick={() => handleOpen(index)}
             placeholder={undefined}
             onPointerEnterCapture={undefined}
@@ -52,7 +52,7 @@ const FAQList: FC<FAQ> = ({ faqs }) => {
               )}
             </span>
           </AccordionHeader>
-          <AccordionBody className="pr-10 text-neutral-600 pt-0">
+          <AccordionBody className="pr-10 text-neutral-600 dark:!text-bright pt-0 pl-4">
             {faq.description}
           </AccordionBody>
           <div

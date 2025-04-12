@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FiMenu } from "react-icons/fi";
 import { RiCloseLine } from "react-icons/ri";
 import { useToggle } from "usehooks-ts";
+import Button from "../ui/Button";
 
 const MobileNav = () => {
   const [menuOpen, toggleMenu] = useToggle(false);
@@ -14,8 +15,8 @@ const MobileNav = () => {
     <>
       <header
         className={classNames(
-          "fixed w-full lg:hidden px-8 pt-4 pb-3  transition-all top-0 left-0 z-50 bg-[#F2F3F5]",
-          { "fixed top-0 left-0 bg-white": menuOpen }
+          "fixed w-full lg:hidden px-8 pt-4 pb-3  transition-all top-0 left-0 z-50 bg-gray dark:bg-dark",
+          { "fixed top-0 left-0 bg-red-500 dark:bg-red-500": menuOpen }
         )}
       >
         <nav className="flex flex-col justify-between h-full">
@@ -28,7 +29,7 @@ const MobileNav = () => {
                 height={32}
               />
               <span
-                className="font-bold text-base text-neutral-900"
+                className="font-bold text-base text-neutral-900 dark:text-neutral-300"
                 style={{ letterSpacing: "-0.06em" }}
               >
                 Abstractly
@@ -45,7 +46,7 @@ const MobileNav = () => {
           <ul
             className={classNames(
               "flex flex-col h-full w-full",
-              { "flex h-screen": menuOpen },
+              { "flex flex-1 h-full": menuOpen },
               { "hidden ": !menuOpen }
             )}
           >
@@ -68,12 +69,8 @@ const MobileNav = () => {
               })}
             </div>
             <div className="flex flex-col px-3 gap-4 mt-auto">
-              <button className="bg-white shadow-md px-[16px] py-[10px] border border-neutral-200 rounded-sm w-full text-base font-medium">
-                Learn more
-              </button>
-              <button className="bg-indigo-700 shadow-md px-[16px] py-[10px] rounded-sm text-white w-full text-base font-medium">
-                See pricing
-              </button>
+              <Button variant="secondary"> Learn more</Button>
+              <Button> See pricing</Button>
             </div>
           </ul>
         </nav>

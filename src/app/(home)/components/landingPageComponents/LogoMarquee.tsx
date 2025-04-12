@@ -14,13 +14,19 @@ const logos = [
 
 const LogoMarquee = () => {
   return (
-    <section className="mx-4 py-12 md:py-14 lg:py-16 overflow-hidden bg-white">
+    <section className="mx-4 py-12 md:py-14 lg:py-16 overflow-hidden bg-light dark:bg-dark">
       <div className="flex flex-col text-center gap-8">
         <Heading style="h4">Used by teams that you love</Heading>
         <div className="flex w-max animate-marquee">
           {logos.concat(logos).map((logo, index) => (
-            <div key={index} className="flex justify-center w-[218px] h-[96px]">
-              <Image src={logo} alt="logo" width={170} height={48} />
+            <div key={index} className="flex justify-center w-[218px] h-[76px]">
+              <Image
+                src={logo}
+                alt="logo"
+                width={170}
+                height={48}
+                className="bg-white rounded-md"
+              />
             </div>
           ))}
         </div>
