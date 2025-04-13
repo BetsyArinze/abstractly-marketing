@@ -54,7 +54,7 @@ const CookieConsentBanner = () => {
       previousMarketingConsent &&
       previousAnalyticsConsent
     ) {
-      setShowBanner(true);
+      setShowBanner(false);
     }
   }, []);
 

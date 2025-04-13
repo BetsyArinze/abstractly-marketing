@@ -26,14 +26,7 @@ const FAQList: FC<FAQ> = ({ faqs }) => {
   return (
     <div>
       {faqs.map((faq, index) => (
-        <Accordion
-          open={open === index}
-          key={index}
-          placeholder={undefined}
-          onChange={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
-        >
+        <Accordion open={open === index} key={index}>
           <AccordionHeader
             color="blue"
             className="text-lg font-medium text-neutral-900 dark:text-bright flex items-center justify-between text-start cursor-pointer shadow-none border-none px-4 rounded-sm"
