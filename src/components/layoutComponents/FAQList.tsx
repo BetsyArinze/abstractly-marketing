@@ -38,9 +38,6 @@ const FAQList: FC<FAQ> = ({ faqs }) => {
             color="blue"
             className="text-lg font-medium text-neutral-900 dark:text-bright flex items-center justify-between text-start cursor-pointer shadow-none border-none px-4 rounded-sm"
             onClick={() => handleOpen(index)}
-            placeholder={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
             role="button"
           >
             {faq.title}
