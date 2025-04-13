@@ -88,7 +88,7 @@ const PricingSection = () => {
             return (
               <div
                 className={classNames(
-                  "flex flex-col flex-1 w-full border rounded-lg dark:bg-neutral-300",
+                  "flex flex-col flex-1 w-full border rounded-lg dark:bg-bright",
                   {
                     "border-indigo-600 shadow-md": selectedPlan === billingPlan,
                     "border-neutral-200": selectedPlan !== billingPlan,

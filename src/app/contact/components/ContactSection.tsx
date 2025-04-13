@@ -85,7 +85,7 @@ const ContactUs = () => {
           role="form"
           aria-labelledby="contact-form"
         >
-          <div className="flex flex-col w-full gap-6 border border-neutral-200 dark:bg-light dark:text-black p-8 rounded-lg">
+          <div className="flex flex-col w-full gap-6 border border-neutral-200 dark:bg-bright dark:text-black p-8 rounded-lg">
             <div className="flex flex-col md:flex-row w-full gap-8">
               <div className="w-full">
                 <label htmlFor="name" className="pb-[6px]">
