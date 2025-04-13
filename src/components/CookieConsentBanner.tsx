@@ -11,6 +11,7 @@ const CookieConsentBanner = () => {
   const [analyticsChecked, setAnalyticsChecked] = useState(false);
   const [showManageModal, setShowManageModal] = useState(false);
   const [showBanner, setShowBanner] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const getCookie = (name: string) => {
     const match = document.cookie.match(
@@ -57,6 +58,20 @@ const CookieConsentBanner = () => {
     }
   }, []);
 
+  useEffect(() => {
+    // Check for dark mode
+    const darkModeMediaQuery = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+    if (darkModeMediaQuery.matches) {
+      setIsDarkMode(true);
+    } else {
+      setIsDarkMode(false);
+    }
+
+    console.log("tyrye", isDarkMode);
+  }, [isDarkMode]);
+
   return (
     <>
       {showBanner && (
@@ -65,10 +80,10 @@ const CookieConsentBanner = () => {
           buttonClasses="hidden"
           cookieName="yourAppCookieConsent"
           style={{
-            background: "white",
+            background: isDarkMode ? " #d4d4d4 " : "white",
             padding: "20px 0px 0px 0px",
             alignItems: "center",
-            border: "1px solid #e5e7eb",
+            border: isDarkMode ? "" : "1px solid #e5e7eb",
           }}
           expires={365}
           onAccept={() => {
@@ -78,11 +93,14 @@ const CookieConsentBanner = () => {
             setCookiesConsent(false, false);
           }}
         >
-          <div className="text-neutral-900 h-fit mb-6 md:mb-6">
-            <Paragraph $medium className="mb-2 text-neutral-900 font-semibold">
+          <div className="text-neutral-900 dark:!text-dull h-fit mb-6 md:mb-6">
+            <Paragraph
+              $medium
+              className="mb-2 text-neutral-900 dark:!text-dull font-semibold"
+            >
               We use cookies
             </Paragraph>
-            <Paragraph className="">
+            <Paragraph className="dark:!text-dull">
               We use cookies to enhance your browsing experience and improve our
               website&apos;s performance. By continuing to use this site, you
               consent to the use of cookies. To learn more about how we use

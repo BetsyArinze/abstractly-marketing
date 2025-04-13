@@ -16,7 +16,7 @@ const MobileNav = () => {
       <header
         className={classNames(
           "fixed w-full lg:hidden px-8 pt-4 pb-3  transition-all top-0 left-0 z-50 bg-gray dark:bg-dark",
-          { "fixed top-0 left-0 bg-red-500 dark:bg-red-500": menuOpen }
+          { "fixed top-0 left-0 bg-white dark:bg-dark h-screen": menuOpen }
         )}
       >
         <nav className="flex flex-col justify-between h-full">
@@ -68,7 +68,7 @@ const MobileNav = () => {
                 );
               })}
             </div>
-            <div className="flex flex-col px-3 gap-4 mt-auto">
+            <div className="flex flex-col px-3 gap-4 mt-auto pb-10">
               <Button variant="secondary"> Learn more</Button>
               <Button> See pricing</Button>
             </div>
