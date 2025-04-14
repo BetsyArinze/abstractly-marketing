@@ -8,10 +8,17 @@ const AbstractlyFeaturesTwo = () => {
     <section className="bg-light dark:bg-dark mx-4 py-12 md:py-14 lg:py-16">
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24 w-full">
         <div className="flex flex-col pb-12 md:pb-16 items-center text-center">
-          <Heading style="h6" className="text-indigo-700 font-semibold pb-3">
+          <Heading
+            level="h1"
+            style="h6"
+            className="text-indigo-700 font-semibold pb-3"
+          >
             Best-in-class support
           </Heading>
-          <Heading className="font-semibold pb-5 text-5xl">
+          <Heading
+            level="h2"
+            className="font-semibold pb-5 text-4xl md:text-5xl"
+          >
             Convenience and licensing that empowers
           </Heading>
           <Paragraph style="xl" className="text-center lg:px-28">
@@ -34,13 +41,14 @@ const AbstractlyFeaturesTwo = () => {
             {features.map((feature) => (
               <div
                 key={feature.title}
+                role="listitem"
                 className="flex items-start justify-start lg:pb-4 gap-5"
               >
                 <div className="min-w-12 h-12 flex items-center justify-center rounded-full shadow-md dark:bg-light">
                   <feature.icon size={24} color="blue" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col items-start text-start">
-                  <Heading style="h5" className="font-semibold ">
+                  <Heading level="h3" style="h5" className="font-semibold ">
                     {feature.title}
                   </Heading>
                   <Paragraph>{feature.description}</Paragraph>

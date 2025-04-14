@@ -47,12 +47,12 @@ const Newsletter = () => {
     >
       <div className="flex flex-col lg:flex-row  px-3 md:px-4 lg:px-24 justify-center items-center gap-8 w-full">
         <div className="flex flex-col w-full lg:w-[50%] gap-12">
-          <Heading className="font-semibold text-5xl pb-4">
+          <Heading className="font-semibold text-4xl md:text-5xl pb-4">
             Get the finest curated abstracts delivered weekly to your inbox
           </Heading>
           <div className="flex flex-col gap-5" role="list">
             {benefits.map((benefit) => (
-              <div className="flex gap-3" key={benefit}>
+              <div className="flex gap-3" key={benefit} role="listitem">
                 <div className="flex w-6 h-6 bg-indigo-50 rounded-full items-center justify-center">
                   <RiCheckFill color="blue" size={24} />
                 </div>
@@ -89,13 +89,14 @@ const Newsletter = () => {
             </Paragraph>
           </div>
         </div>
-        <div className="w-full lg:w-[50%] h-[288px] md:h-[608px] rounded-lg">
+        <div className="flex w-full lg:w-[50%] h-[288px] md:h-[608px] rounded-lg items-center">
           <Image
             src="/newsletter.jpg"
             width={592}
-            height={394}
+            height={494}
             alt="features"
-            className="h-full w-full"
+            layout="responsive"
+            className="w-full object-cover"
             loading="lazy"
           />
         </div>

@@ -18,10 +18,18 @@ const WhyChooseUs = () => {
           from="top"
           className="flex flex-col pb-12 md:pb-16 items-center text-center"
         >
-          <Heading style="h6" className="text-indigo-700 font-semibold pb-3">
+          <Heading
+            level="h1"
+            style="h6"
+            className="text-indigo-700 font-semibold pb-3"
+          >
             Premium abstract images
           </Heading>
-          <Heading className="font-semibold pb-5 text-5xl">
+          <Heading
+            level="h2"
+            style="h1"
+            className="font-semibold pb-5 text-4xl md:text-5xl"
+          >
             Easy access to top quality images
           </Heading>
           <Paragraph style="xl" className="text-center lg:px-28">
@@ -37,12 +45,17 @@ const WhyChooseUs = () => {
             <EntryMotion
               from="bottom"
               key={reason.title}
+              role="listitem"
               className="flex flex-col items-center lg:pb-4"
             >
               <div className="w-12 h-12 flex items-center justify-center rounded-full shadow-md dark:bg-light">
                 <reason.icon size={24} color="blue" />
               </div>
-              <Heading style="h5" className="font-semibold pb-2 pt-5 ">
+              <Heading
+                level="h3"
+                style="h5"
+                className="font-semibold pb-2 pt-5 "
+              >
                 {reason.title}
               </Heading>
               <Paragraph>{reason.description}</Paragraph>

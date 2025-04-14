@@ -46,7 +46,7 @@ const ContactUs = () => {
       <div className="flex flex-col lg:flex-row  px-3 md:px-4 lg:px-24 justify-center items-center gap-16 lg:gap-8 w-full">
         <div className="flex flex-col w-full lg:w-[50%] gap-12">
           <div className="flex flex-col">
-            <Heading className="font-semibold text-5xl pb-4">
+            <Heading className="font-semibold text-4xl md:text-5xl pb-4">
               Talk to our team
             </Heading>
             <Paragraph style="lg">
@@ -94,7 +94,6 @@ const ContactUs = () => {
                 <input
                   id="name"
                   placeholder="Your name"
-                  aria-labelledby="name"
                   {...register("name", { required: "Name is required" })}
                   className="w-full bg-neutral-50 border border-neutral-200 text-neutral-500 dark:text-black text-sm px-[14px] py-[10px] rounded-sm"
                 />
@@ -103,7 +102,7 @@ const ContactUs = () => {
                 )}
               </div>
               <div className="w-full">
-                <label htmlFor="name" className="pb-[6px]">
+                <label htmlFor="email" className="pb-[6px]">
                   Email
                 </label>
                 <input
@@ -123,7 +122,7 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="w-full flex flex-col pb-4">
-              <label htmlFor="name" className="pb-[6px]">
+              <label htmlFor="message" className="pb-[6px]">
                 Message
               </label>
 
