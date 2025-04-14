@@ -18,7 +18,7 @@ const FeaturesHero = () => {
           from="top"
           className="flex flex-col gap-8 md:gap-16 w-full lg:w-[45%] text-start"
         >
-          <Heading className="text-4xl md:text-5xl lg:text-6xl font-semibold">
+          <Heading className="text-4xl md:text-5xl font-semibold">
             Premium abstract images
           </Heading>
           <div className="flex flex-col gap-5">

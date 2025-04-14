@@ -3,6 +3,7 @@ import React, { JSX } from "react";
 interface HeadingProps {
   children: React.ReactNode;
   style?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   className?: string;
 }
 
@@ -10,8 +11,9 @@ const Heading: React.FC<HeadingProps> = ({
   children,
   style = "h1",
   className = "",
+  level = "h1",
 }) => {
-  const Tag = style as keyof JSX.IntrinsicElements;
+  const Tag = level as keyof JSX.IntrinsicElements;
   const baseStyles = "font-bold text-gray-900 dark:text-gray-300";
 
   const sizeStyles = {

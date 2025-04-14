@@ -10,7 +10,7 @@ const Statistics = () => {
           <Heading style="h6" className="text-indigo-700 font-semibold pb-3">
             Statistics
           </Heading>
-          <Heading className="font-semibold pb-5 text-5xl">
+          <Heading className="font-semibold pb-5 text-4xl md:text-5xl">
             More than premium abstract imagery
           </Heading>
           <Paragraph style="xl" className="text-center lg:px-28">

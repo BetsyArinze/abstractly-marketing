@@ -18,7 +18,7 @@ const LandingHeroSection = () => {
           className="flex flex-col gap-8 md:gap-16 lg:gap-8 w-full lg:w-[45%]"
         >
           <div className="flex flex-col gap-6 text-center md:text-start ">
-            <Heading className="text-4xl md:text-5xl lg:text-6xl font-semibold">
+            <Heading className="text-4xl md:text-5xl font-semibold">
               Well crafted abstract images
             </Heading>
             <Paragraph style="xl">
@@ -37,13 +37,14 @@ const LandingHeroSection = () => {
             </Link>
           </div>
         </EntryMotion>
-        <EntryMotion className="w-full lg:w-[54%] h-[264px] md:h-[520px] ">
+        <EntryMotion className="w-full lg:w-[54%] items-center">
           <Image
             src="/landingPage/hero-image.jpg"
             height={526}
             width={696}
             alt="hero"
-            className="h-full w-full"
+            layout="responsive"
+            className="object-cover h-auto"
           />
         </EntryMotion>
       </div>

@@ -22,10 +22,17 @@ const PricingSection = () => {
     <section className="bg-light dark:bg-dark mx-4 py-12 md:py-14 lg:py-16">
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24 w-full">
         <div className="flex flex-col pb-10 items-center text-center">
-          <Heading style="h6" className="text-indigo-700 font-semibold pb-3">
+          <Heading
+            level="h1"
+            style="h6"
+            className="text-indigo-700 font-semibold pb-3"
+          >
             Pricing Tiers
           </Heading>
-          <Heading className="font-semibold pb-5 text-5xl">
+          <Heading
+            level="h2"
+            className="font-semibold pb-5 text-4xl md:text-5xl"
+          >
             Fit for all your needs
           </Heading>
           <Paragraph style="xl" className="text-center lg:px-28">
@@ -105,6 +112,7 @@ const PricingSection = () => {
                 <div className="flex flex-col flex-1 p-8 gap-8">
                   <div>
                     <Heading
+                      level="h3"
                       style="h4"
                       className="font-semibold pb-2 dark:text-gray-900"
                     >

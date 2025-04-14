@@ -13,7 +13,7 @@ const FAQSection = () => {
     >
       <div className="flex flex-col items-center px-3 md:px-4 lg:px-24 w-full">
         <div className="flex flex-col pb-12 md:pb-16 items-center text-center">
-          <Heading className="font-semibold pb-5 text-5xl">
+          <Heading className="font-semibold pb-5 text-4xl md:text-5xl">
             Frequently asked questions
           </Heading>
           <Paragraph style="xl" className="text-center lg:px-28">
