@@ -152,22 +152,24 @@ const PricingSection = () => {
                       </div>
                     ))}
                   </div>
-                  <Button
-                    variant={
-                      selectedPlan === billingPlan ? "primary" : "secondary"
-                    }
-                    onClick={() => {
-                      if (billingPeriod === "monthly") {
-                        const amountToPay = amountPerMonth;
-                        handleCheckout(amountToPay);
-                      } else {
-                        const amountToPay = Math.ceil(amountPerMonth * 12);
-                        handleCheckout(amountToPay);
+                  <div className="flex flex-col">
+                    <Button
+                      variant={
+                        selectedPlan === billingPlan ? "primary" : "secondary"
                       }
-                    }}
-                  >
-                    Buy now
-                  </Button>
+                      onClick={() => {
+                        if (billingPeriod === "monthly") {
+                          const amountToPay = amountPerMonth;
+                          handleCheckout(amountToPay);
+                        } else {
+                          const amountToPay = Math.ceil(amountPerMonth * 12);
+                          handleCheckout(amountToPay);
+                        }
+                      }}
+                    >
+                      Buy now
+                    </Button>
+                  </div>
                 </div>
               </div>
             );
