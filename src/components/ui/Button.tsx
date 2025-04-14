@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
 }) => {
   const baseStyle =
-    "px-[16px] py-[10px] rounded-sm transition-all font-medium text-lg cursor-pointer shadow-md min-h-[48px]";
+    "px-[16px] h-full rounded-sm transition-all font-medium text-lg cursor-pointer shadow-md min-h-[48px]";
 
   const variantStyles = {
     primary:

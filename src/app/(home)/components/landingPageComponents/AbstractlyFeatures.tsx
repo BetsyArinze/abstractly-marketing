@@ -20,7 +20,7 @@ const AbstractlyFeatures = () => {
             High quality images
           </Heading>
           <Heading
-            level="h1"
+            level="h2"
             style="h1"
             className="font-semibold pb-5 text-4xl md:text-5xl"
           >
