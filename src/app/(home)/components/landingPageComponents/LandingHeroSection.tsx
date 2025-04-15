@@ -12,7 +12,7 @@ const LandingHeroSection = () => {
       className="px-4 pt-[100px] lg:pt-19"
       aria-labelledby="landing-page"
     >
-      <div className="flex flex-col w-full lg:flex-row bg-light dark:bg-dark gap-8 items-center px-3 md:px-4 lg:px-24 py-12 md:py-14 lg:py-16 rounded-t-md h-screen">
+      <div className="flex flex-col w-full lg:flex-row bg-light dark:bg-dark gap-8 items-center px-3 md:px-4 lg:px-24 py-12 md:py-14 lg:py-16 rounded-t-md">
         <EntryMotion
           from="top"
           className="flex flex-col gap-8 md:gap-16 lg:gap-8 w-full lg:w-[45%]"
