@@ -9,7 +9,7 @@ export const abstractlyPaths = {
     path: "/pricing",
   },
   about: {
-    path: "/about",
+    path: "/about-us",
   },
   contact: {
     path: "/contact",

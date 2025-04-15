@@ -8,6 +8,7 @@ import { FiMenu } from "react-icons/fi";
 import { RiCloseLine } from "react-icons/ri";
 import { useToggle } from "usehooks-ts";
 import Button from "../ui/Button";
+import { abstractlyPaths } from "@/app/utils/paths";
 
 const MobileNav = () => {
   const [menuOpen, toggleMenu] = useToggle(false);
@@ -69,8 +70,14 @@ const MobileNav = () => {
               })}
             </div>
             <div className="flex flex-col px-3 gap-4 mt-auto pb-10">
-              <Button variant="secondary"> Learn more</Button>
-              <Button> See pricing</Button>
+              <Link href={abstractlyPaths.about.path} onClick={toggleMenu}>
+                <Button variant="secondary" className="w-full">
+                  Learn more
+                </Button>
+              </Link>
+              <Link href={abstractlyPaths.pricing.path} onClick={toggleMenu}>
+                <Button className="w-full">See pricing</Button>
+              </Link>
             </div>
           </ul>
         </nav>
