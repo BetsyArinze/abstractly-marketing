@@ -12,12 +12,12 @@ const LandingHeroSection = () => {
       className="px-4 pt-[100px] lg:pt-19"
       aria-labelledby="landing-page"
     >
-      <div className="flex flex-col w-full lg:flex-row bg-light dark:bg-dark gap-8 items-center px-3 md:px-4 lg:px-24 py-12 md:py-24 rounded-t-md h-[100%]">
+      <div className="flex flex-col w-full lg:flex-row bg-light dark:bg-dark gap-8 items-center px-3 md:px-4 lg:px-24 py-12 md:py-14 rounded-t-md h-[100%]">
         <EntryMotion
           from="top"
-          className="flex flex-col gap-8 md:gap-16 lg:gap-8 w-full lg:w-[45%]"
+          className="flex flex-col gap-8 md:gap-16 lg:gap-16 w-full lg:w-[45%]"
         >
-          <div className="flex flex-col gap-6 text-center md:text-start ">
+          <div className="flex flex-col gap-6 lg:gap-7 text-center md:text-start ">
             <Heading className="text-4xl md:text-5xl font-semibold">
               Well crafted abstract images
             </Heading>
@@ -37,14 +37,13 @@ const LandingHeroSection = () => {
             </Link>
           </div>
         </EntryMotion>
-        <EntryMotion className="w-full lg:w-[54%] items-center">
+        <EntryMotion className="flex w-full lg:w-[51%] h-[264px] md:h-[520px]">
           <Image
             src="/landingPage/hero-image.jpg"
             height={526}
             width={696}
             alt="hero"
-            layout="responsive"
-            className="object-cover h-auto"
+            className="h-full w-full"
           />
         </EntryMotion>
       </div>

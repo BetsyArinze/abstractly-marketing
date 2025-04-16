@@ -16,7 +16,11 @@ const LogoMarquee = () => {
   return (
     <section className="mx-4 py-12 md:py-14 lg:py-16 overflow-hidden bg-light dark:bg-dark">
       <div className="flex flex-col text-center gap-8">
-        <Heading level="h1" style="h4">
+        <Heading
+          level="h1"
+          style="h2"
+          className="font-semibold pb-5 text-3xl md:text-4xl"
+        >
           Used by teams that you love
         </Heading>
         <div className="flex w-max animate-marquee">

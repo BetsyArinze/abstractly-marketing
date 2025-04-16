@@ -34,7 +34,7 @@ const AboutUsHero = () => {
             </Link>
           </div>
         </div>
-        <div className="w-full lg:w-[54%] h-[264px] md:h-[520px] ">
+        <div className="w-full lg:w-[54%] h-[264px] md:h-[520px]">
           <Image
             src="/landingPage/hero-image.jpg"
             height={526}
