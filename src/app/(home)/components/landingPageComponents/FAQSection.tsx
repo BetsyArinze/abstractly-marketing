@@ -21,7 +21,7 @@ const FAQSection = () => {
           </Paragraph>
         </div>
         <FAQList faqs={faqs} />
-        <div className="flex flex-col dark:bg-dark md:flex-row w-full p-4 md:p-6 justify-between items-center rounded-lg border border-neutral-200 shadow-md">
+        <div className="flex flex-col dark:bg-dark md:flex-row w-full p-4 md:p-6 mt-6 justify-between items-center rounded-lg border border-neutral-200 shadow-md">
           <div className="flex flex-col pb-4">
             <Paragraph
               style="xl"

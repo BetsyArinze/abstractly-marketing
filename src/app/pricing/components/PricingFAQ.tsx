@@ -18,7 +18,7 @@ const PricingFAQ = () => {
           </Paragraph>
         </div>
         <FAQList faqs={faqs} />
-        <div className="flex flex-col md:flex-row w-full p-4 md:p-6 justify-between items-center rounded-lg border border-neutral-200 shadow-md">
+        <div className="flex flex-col md:flex-row w-full p-4 md:p-6 mt-6 justify-between items-center rounded-lg border border-neutral-200 shadow-md">
           <div className="flex flex-col pb-4">
             <Paragraph style="xl" className="font-semibold text-neutral-900">
               Can’t find the answer you’re looking for?
